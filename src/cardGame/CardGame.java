@@ -15,6 +15,7 @@ import cardGame.Exceptions.InvalidCardValueException;
             this.suit = suit;
         }
 
+
         public Suit getSuit() {
             return suit;
         }
