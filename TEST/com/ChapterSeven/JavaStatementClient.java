@@ -27,5 +27,6 @@ public class JavaStatementClient {
     @Test
     void canCreateArrayBonus(){
         int[] arrayBonus = new int[15];
+        assertEquals(arrayBonus[0]=1,state.canCreateNewArray(arrayBonus[1]));
     }
 }
