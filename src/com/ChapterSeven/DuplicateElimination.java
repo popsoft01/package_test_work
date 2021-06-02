@@ -28,7 +28,7 @@ public class DuplicateElimination {
         int[] temp = new int[array.length];
         Arrays.sort(array);
         int j = 0;
-        for(int i = 0; i< array.length-1;i++){
+        for(int i = 0; i< array.length;i++){
             if(array[i] != array[i++]){
                 temp[j++] = array[i];
             }
