@@ -18,12 +18,12 @@ public class DiceRollingTest {
         Random rand = new Random();
 //        int numberOne = 1 + rand.nextInt(10);
 //        int numberTwo = 1 + rand.nextInt(10);
-        assertNotEquals(DiceRolling.dieRoll(),DiceRolling.dieRollTwo());
+//        assertNotEquals(DiceRolling.dieRoll(),DiceRolling.dieRollTwo());
     }
     @Test
     void canCalculatedSumOfThe_TwoRandomNumber(){
 //        DiceRolling.dieRoll(),DiceRolling.dieRollTwo()
-        assertEquals(DiceRolling.dieRoll()+DiceRolling.dieRollTwo(),DiceRolling.sumRandomNumber());
+//        assertEquals(DiceRolling.dieRoll()+DiceRolling.dieRollTwo(),DiceRolling.sumRandomNumber());
     }
     @Test
     void canAssignArrayToIndex(){
