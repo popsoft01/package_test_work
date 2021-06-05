@@ -44,18 +44,18 @@ public class DuplicateElimination {
         return newIndex;
     }
 
-    public void inputDuplicaRemover(int[] array) {
-        Scanner input = new Scanner(System.in);
-
-        for (int i = 0; i < array.length; i++) {
-//            array[i] = number;
-            System.out.println("pls enter a number");
-            int number = input.nextInt();
-//            array[i] = number;
-            isUnique(array, number);
-            System.out.println(Arrays.toString(array));
-        }
-    }
+//    public void inputDuplicaRemover(int[] array) {
+//        Scanner input = new Scanner(System.in);
+//
+//        for (int i = 0; i < array.length; i++) {
+////            array[i] = number;
+//            System.out.println("pls enter a number");
+//            int number = input.nextInt();
+////            array[i] = number;
+//            isUnique(array, number);
+//            System.out.println(Arrays.toString(array));
+//        }
+//    }
 
     public boolean isUnique(int[] array, int number) {
         for (int j = 0; j <= array.length - 1; j++) {
@@ -70,10 +70,15 @@ public class DuplicateElimination {
 
     public static void main(String[] args) {
         DuplicateElimination duplicate = new DuplicateElimination();
+        Scanner input = new Scanner(System.in);
         int[] array = new int[5];
-        duplicate.isUnique(array,5);
-        duplicate.isUnique(array,5);
-//        duplicate.inputDuplicaRemover(array);
+        for (int i = 0; i < array.length; i++){
+        int number = input.nextInt();
+        duplicate.isUnique(array,number);}
 
+
+//        duplicate.inputDuplicaRemover(array);
+        System.out.println(Arrays.toString(array));
     }
+
 }
