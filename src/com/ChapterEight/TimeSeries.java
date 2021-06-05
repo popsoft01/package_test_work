@@ -10,6 +10,9 @@ public class TimeSeries {
 //        setMinute(minute, 60, "Minute was of range");
 //        setSeconds(seconds, 60, "Second was out of range");
 //    }
+//    public TimeSeries(int hour,int minute,int seconds){
+
+//    }
 
     public void setSeconds(int seconds) throws illegalArgurmentExcption {
         if (seconds < 0 || seconds > 60) {

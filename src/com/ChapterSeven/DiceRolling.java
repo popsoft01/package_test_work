@@ -29,7 +29,7 @@ public class DiceRolling {
     public static String assignArray(int[] dice) {
 
         for(int count = 0; count < 36000; count++) {
-            int random = sumRandomNumber();
+//            int random = sumRandomNumber();
             if (sumRandomNumber() == 2)
                 ++dice[0];
             }
@@ -66,7 +66,10 @@ public class DiceRolling {
         System.out.println(Arrays.toString(dice));
         return "hello";
     }
+    public static void printGrid(){
 
+
+    }
     public static void main(String[] args) {
         int [] arr = new int[10];
         DiceRolling.assignArray(arr);
