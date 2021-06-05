@@ -59,22 +59,34 @@ public class DuplicateElimination {
 
     public boolean isUnique(int[] array, int number) {
         for (int j = 0; j <= array.length - 1; j++) {
-            if (array[j] == number)
-                System.out.println(Arrays.toString(array));
-                return false;
+            if (array[j] == number){
+//                System.out.println(Arrays.toString(array));
+                return true;
+            }
 //              number = input.nextInt();
         }
-        return true;
+        return false;
     }
 
 
     public static void main(String[] args) {
+        int[] array = new int[5];
         DuplicateElimination duplicate = new DuplicateElimination();
         Scanner input = new Scanner(System.in);
-        int[] array = new int[5];
+        int number;
         for (int i = 0; i < array.length; i++){
-        int number = input.nextInt();
-        duplicate.isUnique(array,number);}
+        number = input.nextInt();
+        if (!duplicate.isUnique(array,number)){
+            array[i] = number;
+        }else{
+            System.out.println("invalid input");
+        }
+            for (int count : array) {
+                if (count != 0) {
+                    System.out.println(count);
+                }
+            }
+        }
 
 
 //        duplicate.inputDuplicaRemover(array);
