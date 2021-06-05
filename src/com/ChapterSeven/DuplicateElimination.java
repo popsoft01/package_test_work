@@ -40,6 +40,7 @@ public class DuplicateElimination {
             for (int k = 0; k < newIndex; k++){
                 array[k] = temp[k]; }
         }
+        System.out.println(Arrays.toString(temp));
         System.out.println(newIndex);
         return newIndex;
     }
