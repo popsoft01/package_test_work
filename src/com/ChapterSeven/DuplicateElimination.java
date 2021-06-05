@@ -83,7 +83,7 @@ public class DuplicateElimination {
         }
             for (int count : array) {
                 if (count != 0) {
-                    System.out.println(count);
+                    System.out.println(array[count]);
                 }
             }
         }
