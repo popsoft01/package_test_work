@@ -5,34 +5,30 @@ public class AirLine {
     boolean[] seatStatus = new boolean[10];
     private int FIRST_CLASS_SEAT = 5;
 
-    public boolean assignFirstClass() {
-        int i = 0;
+    public void assignFirstClass() {
         if (FIRST_CLASS_SEAT > 0) {
-            for (; i < 5; i++) {
-                if (seatStatus[i] = false) {
-                    seatStatus[i] = true;
-                    FIRST_CLASS_SEAT--;
+            checkSeat();
+            FIRST_CLASS_SEAT--;
                 }
             }
-        }
 
-        return seatStatus[i];
-    }
 
-    public boolean assignEconomicClass() {
-        int i = 0;
+    public void assignEconomicClass() {
         if (ECONOMIC_CLASS_SEAT > 0) {
-            for (; i < 5; i++) {
-                if (seatStatus[i] = false) {
-                    seatStatus[i] = true;
-                    ECONOMIC_CLASS_SEAT--;
-                }
-            }
+            checkSeat();
+            ECONOMIC_CLASS_SEAT--;
         }
-
-        return seatStatus[i];
     }
 
+    public boolean checkSeat() {
+        int i = 0;
+        for (; i < 5; i++) {
+            if (seatStatus[i] = false) {
+                seatStatus[i] = true;
+            }
+        }
+        return seatStatus[i];
+    }
     public void displayGreet() {
         String greeting = """
                 welcome Afric Airline
@@ -46,6 +42,11 @@ public class AirLine {
             assignFirstClass();
         }else if(seatChoice == 2){
             assignEconomicClass();
+        }
+    }
+    public void makeRecommadetion(){
+        if (ECONOMIC_CLASS_SEAT == 0){
+
         }
     }
 }
