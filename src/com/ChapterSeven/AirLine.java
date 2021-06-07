@@ -46,15 +46,25 @@ public class AirLine {
     }
     public void recommedationMessage(){
         String message = """
-                "Ecominic class is full,\\n  will you like First class seat"
+                "Economic class is full,\\n  will you like First class seat"
                 Enter 1 to proceed with first Class
                 Enter 2 to Exit
                 """;
         System.out.println(message);
     }
+    public void exitPattern(){
+        String exitMessage = """
+                Sorry!!! for the inconvinecy
+                Next flight leaves in 3 hours.
+                """;
+        System.out.println(exitMessage);
+
+    }
     public void makeRecommadetion(){
         if (ECONOMIC_CLASS_SEAT == 0){
             recommedationMessage();
+        } else if(ECONOMIC_CLASS_SEAT == 0 && FIRST_CLASS_SEAT == 0){
+            exitPattern();
         }
     }
 }
