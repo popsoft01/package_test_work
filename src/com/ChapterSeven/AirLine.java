@@ -15,9 +15,10 @@ public class AirLine {
 
     public void assignEconomicClass() {
         if (ECONOMIC_CLASS_SEAT > 0) {
-            checkSeat();
+            int i = FIRST_CLASS_SEAT;
+            for (;i < ECONOMIC_CLASS_SEAT; i++){
             ECONOMIC_CLASS_SEAT--;
-        }
+        }}
     }
 
     public boolean checkSeat() {
