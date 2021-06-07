@@ -31,9 +31,9 @@ public class AirLine {
     }
     public void displayGreet() {
         String greeting = """
-                welcome Afric Airline
+                welcome POP Airline
                 Enter 1 for first class seat
-                Enter 2 for Ecinomic class seat
+                Enter 2 for Economic class seat
                 """;
         System.out.println(greeting);
     }
