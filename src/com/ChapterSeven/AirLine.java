@@ -23,7 +23,7 @@ public class AirLine {
 
     public boolean checkSeat() {
         int i = 0;
-        for (; i < 5; i++) {
+        for (; i < FIRST_CLASS_SEAT; i++) {
             if (seatStatus[i] = false) {
                 seatStatus[i] = true;
             }
