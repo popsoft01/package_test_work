@@ -44,9 +44,17 @@ public class AirLine {
             assignEconomicClass();
         }
     }
+    public void recommedationMessage(){
+        String message = """
+                "Ecominic class is full,\\n  will you like First class seat"
+                Enter 1 to proceed with first Class
+                Enter 2 to Exit
+                """;
+        System.out.println(message);
+    }
     public void makeRecommadetion(){
         if (ECONOMIC_CLASS_SEAT == 0){
-
+            recommedationMessage();
         }
     }
 }
