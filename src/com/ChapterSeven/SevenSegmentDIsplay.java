@@ -41,7 +41,7 @@ public class SevenSegmentDIsplay {
         }
     }
     public static void writeOnF(){
-        for(int i = 0; i< sevenSegment.length-1; i++){
+        for(int i = 0; i< sevenSegment.length-2; i++){
             for (int j = 0; j<sevenSegment.length; j++){
                 sevenSegment[i][0] = 1;
             }
@@ -55,7 +55,38 @@ public class SevenSegmentDIsplay {
 
         }
     }
-    public static void
+    public static void collect(String string){
+        for (int i = 0; i<string.length(); i++){
+            if (string.charAt(i) == '1'){
+                switch (i){
+                    case 0:
+                        writeOnA();
+                        break;
+                    case 1:
+                        writeOnB();
+                        break;
+                    case 2:
+                        writeOnC();
+                        break;
+                    case 3:
+                        writeOnD();
+                        break;
+                    case 4:
+                        writeOnE();
+                        break;
+                    case 5:
+                        writeOnF();
+                        break;
+                    case 6:
+                        writeOnG();
+                        break;
+                }
+
+
+            }
+
+        }
+    }
     public static void sevenDislay(){
         for (int i = 0; i<sevenSegment.length; i++){
             for (int j = 0; j <sevenSegment[i].length; j++){
@@ -72,13 +103,15 @@ public class SevenSegmentDIsplay {
     }
 
     public static void main(String[] args) {
-        writeOnA();
-        writeOnB();
-        writeOnC();
-        writeOnD();
-        writeOnE();
-        writeOnF();
-        writeOnG();
+//        writeOnA();
+//        writeOnB();
+//        writeOnC();
+//        writeOnD();
+//        writeOnE();
+//        writeOnF();
+//        writeOnG();
+        collect("11111111");
+//        writeOnF();
         sevenDislay();
 
     }
