@@ -56,37 +56,49 @@ public class SevenSegmentDIsplay {
         }
     }
     public static void collect(String string){
+        string = validation(string);
         for (int i = 0; i<string.length(); i++){
             if (string.charAt(i) == '1'){
-                switch (i){
-                    case 0:
-                        writeOnA();
-                        break;
-                    case 1:
-                        writeOnB();
-                        break;
-                    case 2:
-                        writeOnC();
-                        break;
-                    case 3:
-                        writeOnD();
-                        break;
-                    case 4:
-                        writeOnE();
-                        break;
-                    case 5:
-                        writeOnF();
-                        break;
-                    case 6:
-                        writeOnG();
-                        break;
+                if (string.charAt(i) > '1'){
+                    throw  new IllegalArgumentException("valae can be either zero and one");
+                }else {
+                    switch (i) {
+                        case 0 -> writeOnA();
+                        case 1 -> writeOnB();
+                        case 2 -> writeOnC();
+                        case 3 -> writeOnD();
+                        case 4 -> writeOnE();
+                        case 5 -> writeOnF();
+                        case 6 -> writeOnG();
+                    }
+
+
                 }
-
-
             }
 
         }
     }
+
+    private static String validation(String string) {
+//        String newString =" ";
+        if (string.length() > 8){
+            throw new IllegalArgumentException("String must be eighth or less");
+        }
+//        while (string.length() < 8){
+//
+//        }
+        StringBuilder stringBuilder = new StringBuilder(string);
+        for (int i = 0; i < 8; i++){
+            if (stringBuilder.length() < 8){
+              stringBuilder.insert(0, '0');
+            }
+
+        }
+        string = stringBuilder.toString();
+        System.out.println(string);
+        return string;
+    }
+
     public static void sevenDislay(){
         for (int i = 0; i<sevenSegment.length; i++){
             for (int j = 0; j <sevenSegment[i].length; j++){
@@ -110,7 +122,7 @@ public class SevenSegmentDIsplay {
 //        writeOnE();
 //        writeOnF();
 //        writeOnG();
-        collect("11111111");
+        collect("11");
 //        writeOnF();
         sevenDislay();
 
