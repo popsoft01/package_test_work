@@ -84,6 +84,10 @@ public class SevenSegmentDIsplay {
         if (string.length() > 8){
             throw new IllegalArgumentException("String must be eighth or less");
         }
+//        String lastIndex = new String(String.valueOf(string.length()-1));
+//        if (lastIndex == "1"){
+//            string = null;
+//        }
 //        while (string.length() < 8){
 //
 //        }
@@ -97,6 +101,9 @@ public class SevenSegmentDIsplay {
         string = stringBuilder.toString();
         System.out.println(string);
         return string;
+    }
+    public static void decimalToBinary(){
+
     }
 
     public static void sevenDislay(){
@@ -122,7 +129,7 @@ public class SevenSegmentDIsplay {
 //        writeOnE();
 //        writeOnF();
 //        writeOnG();
-        collect("11");
+        collect("11111110");
 //        writeOnF();
         sevenDislay();
 
