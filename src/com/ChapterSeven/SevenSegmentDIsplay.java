@@ -84,6 +84,12 @@ public class SevenSegmentDIsplay {
         if (string.length() > 8){
             throw new IllegalArgumentException("String must be eighth or less");
         }
+        if (!string.contains("1")){
+            decimalToBinary(string);
+        }
+//        for (int i = 0; i<string.length(); i++){
+//            if(string[i] > "2")
+//        }
 //        String lastIndex = new String(String.valueOf(string.length()-1));
 //        if (lastIndex == "1"){
 //            string = null;
@@ -102,17 +108,17 @@ public class SevenSegmentDIsplay {
         System.out.println(string);
         return string;
     }
-    public static void decimalToBinary(){
-
+    public static String decimalToBinary(String number){
+        return Integer.toBinaryString(Integer.parseInt(number));
     }
 
     public static void sevenDislay(){
-        for (int i = 0; i<sevenSegment.length; i++){
-            for (int j = 0; j <sevenSegment[i].length; j++){
-                if (sevenSegment[i][j] == 1){
+        for (int[] row : sevenSegment) {
+            for (int column : row) {
+                if (column == 1) {
 //                    sevenSegment[i][j] = "#";
                     System.out.print("#" + " ");
-                } else if(sevenSegment[i][j] == 0)
+                } else if (column == 0)
 //                    sevenSegment[i][j] = " ";
                     System.out.print(" " + " ");
 //                System.out.print(sevenSegment[i][j] + "  ");
@@ -129,7 +135,8 @@ public class SevenSegmentDIsplay {
 //        writeOnE();
 //        writeOnF();
 //        writeOnG();
-        collect("11111110");
+        System.out.println(decimalToBinary("22"));
+        collect("22");
 //        writeOnF();
         sevenDislay();
 
