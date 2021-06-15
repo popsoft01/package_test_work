@@ -43,9 +43,15 @@ public class Rectangle {
 
 
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        double newWigth = input.nextDouble();
-        double newLength = input.nextDouble();
+//        Scanner input = new Scanner(System.in);
+//
+//        double newWigth = input.nextDouble();
+//        double newLength = input.nextDouble();
+        Rectangle rect = new Rectangle(10,15);
+        rect.setLength(10);
+        rect.setWidth(15);
+        System.out.println( rect.calculateArea(rect.getLength(), rect.getWidth()));
+
 
 
 
