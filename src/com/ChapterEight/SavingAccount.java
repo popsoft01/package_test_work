@@ -27,7 +27,5 @@ public class SavingAccount {
     public double calculateMonthlyInterest(){
         return savingsBalance * (annualInterestRate/12);
     }
-    public static double modifyInterestRate(){
 
-    }
 }
