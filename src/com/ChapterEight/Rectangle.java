@@ -3,9 +3,14 @@ package com.ChapterEight;
 import java.util.Scanner;
 
 public class Rectangle {
-    private static double length = 1;
-    private static double width =1;
+    private static double length;
+    private static double width;
     public double area;
+
+    public Rectangle(){
+        setWidth(1.0);
+        setLength(1.0);
+    }
 
     public Rectangle(double length, double width){
         if (length <= 0.0 && length > 20.0)
@@ -37,8 +42,11 @@ public class Rectangle {
         Rectangle.width = width;
     }
     public double calculateArea(double length,double width){
-        area = Math.pow(length,2) * Math.pow(width,2);
+        area = length * width;
         return area;
+    }
+    public double parameter(double length,double width){
+      return   2 * length + 2 * width;
     }
 
 
