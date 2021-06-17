@@ -46,6 +46,7 @@ public class SavingAccount {
         SavingAccount account = new SavingAccount(2000.0);
         SavingAccount account2 = new SavingAccount(3000.0);
         setAnnualInterestRate(0.04);
+
         for(int i = 0; i < 12; i++){
             System.out.printf("%s%5.2f%n","month", account.calculatedSavingforMonth());
         }
