@@ -7,11 +7,11 @@ public class SavingAccount {
     private static double annualInterestRate;
 
     public SavingAccount(double savingsBalance){
-        if (savingsBalance <1)
+        if (savingsBalance < 1)
             throw new IllegalArgumentException("Amount must be valid amount");
-        System.out.println(annualInterestRate);
-        System.out.println(this.savingsBalance);
-        System.out.println(savingsBalance);
+        else this.savingsBalance = savingsBalance;
+
+//        System.out.println(savingsBalance);
     }
 
     public static void setAnnualInterestRate(double annualInterestRate) {
@@ -30,10 +30,13 @@ public class SavingAccount {
     }
 
     public double calculateMonthlyInterest(){
+
         return savingsBalance * (SavingAccount.annualInterestRate/12);
     }
+
     public double calculatedSavingforMonth(){
         double saving = calculateMonthlyInterest();
+//        System.out.println(saving);
       return   savingsBalance += saving;
     }
 
@@ -43,12 +46,17 @@ public class SavingAccount {
 
 
     public static void main(String[] args) {
-        SavingAccount account = new SavingAccount(2000.0);
-        SavingAccount account2 = new SavingAccount(3000.0);
-        setAnnualInterestRate(0.04);
+        SavingAccount account = new SavingAccount(200);
+//        SavingAccount account2 = new SavingAccount(3000.0);
 
-        for(int i = 0; i < 12; i++){
-            System.out.printf("%s%5.2f%n","month", account.calculatedSavingforMonth());
+        setAnnualInterestRate(0.04);
+//        account.setSavingsBalance(2000.0);
+//        account.calculateMonthlyInterest();
+//        account2.calculateMonthlyInterest();
+//        account.calculatedSavingforMonth();
+
+        for(int i = 1; i <=12; i++){
+            System.out.printf("%s-%d%8.2f%n","month",i, account.calculatedSavingforMonth());
         }
 
     }

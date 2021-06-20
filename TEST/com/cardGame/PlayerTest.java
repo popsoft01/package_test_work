@@ -24,4 +24,13 @@ class PlayerTest {
 
         assertEquals ( 3, player.getNumberOfCards() );
     }
+    @Test
+    void teste() {
+        int a = 10;
+        int b = 20;
+        a += (a = 4);
+        b = b + (b = 5);
+        System.out.println(a+ ",  "+b);
+    }
+
 }
