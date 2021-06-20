@@ -19,10 +19,10 @@ public class TimeInternalTest {
     }
     @Test
     void hourCannot_BeZero(){
-        timer.sethour(30);
+        timer.sethour(0);
 //        timer.sethour(25);
-      Exception exception = assertThrows(IllegalArgumentException.class,() ->timer.getHour(),"hour must be between 1 and 24");
-      assertTrue(exception.getMessage().contains("hour must be between 1 and 24"));
+      Exception exception = assertThrows(IllegalArgumentException.class,() ->timer.sethour(0),"hour must be between 1 and 24");
+      assertEquals("hour must be between 1 and 24",exception.getMessage());
     }
     @Test
     void canSetMinute(){
@@ -30,10 +30,15 @@ public class TimeInternalTest {
         assertEquals(5,timer.getMinute());
     }
     @Test
-    void minuteCannot_BeZero(){
+    void minuteCannot_BeZero() {
         timer.setMinute(0);
 //        timer.sethour(25);
-        assertThrows(IllegalArgumentException.class,() ->timer.getMinute());
-
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> timer.setMinute(0), "hour must be between 1 and 24");
+        assertEquals("hour must be between 1 and 24", exception.getMessage());
+    }
+    @Test
+    void secondCan_BeSet(){
+        timer.setSecond(5);
+        assertEquals(5,timer.getSecond());
     }
 }
