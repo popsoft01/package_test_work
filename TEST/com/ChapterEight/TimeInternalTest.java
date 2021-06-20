@@ -9,7 +9,7 @@ public class TimeInternalTest {
     TimeInternal timer;
     @BeforeEach
     void start(){
-        timer = new TimeInternal();
+        timer = new TimeInternal(4,5,3);
     }
 
     @Test
