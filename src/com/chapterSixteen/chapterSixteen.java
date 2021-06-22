@@ -23,7 +23,7 @@ public class chapterSixteen {
         return duplicates;
     }
     public static void main(String[] args) {
-        String test = "This sentence contains two words, one and two";
+        String test = "This sentence contains two words, one and two, one";
         Set<String> duplicates = duplicateWords(test);
         System.out.println("input : " + test);
         System.out.println("output : " + duplicates);

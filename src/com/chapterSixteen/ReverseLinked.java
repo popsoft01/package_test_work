@@ -1,8 +1,7 @@
 package com.chapterSixteen;
 
 public class ReverseLinked {
-    // Recursive Java program to reverse
-// a linked list
+
 
         static Node head; // head of list
 
@@ -21,19 +20,14 @@ public class ReverseLinked {
             if (head == null || head.next == null)
                 return head;
 
-		/* reverse the rest list and put
-		the first element at the end */
             Node rest = reverse(head.next);
             head.next.next = head;
 
-            /* tricky step -- see the diagram */
             head.next = null;
 
-            /* fix the head pointer */
             return rest;
         }
 
-        /* Function to print linked list */
         static void print()
         {
             Node temp = head;

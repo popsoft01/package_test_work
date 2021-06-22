@@ -6,7 +6,7 @@ import java.util.Formatter;
 public class StudentPoll {
   private static Formatter output;
 
-    public void opemResponse(){
+    public void openResponse(){
         try{
             output = new Formatter("number.txt");
 
