@@ -14,7 +14,7 @@ public class RepeatWord {
         int count=0;
         for( int i=0;i<word.length;i++)
         {
-            for( int j=0;j<word.length;j++)
+            for( int j = i+1;j<word.length;j++)
             {
                 if(word[i].equals(word[j]))
                 {
