@@ -46,4 +46,8 @@ public class TimeInternalTest {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> timer.setSecond(0), "seconds must be between 1 and 60");
         assertEquals("seconds must be between 1 and 60", exception.getMessage());
     }
+//    @Test
+//    void timeCan_beSet(){
+//
+//    }
 }
