@@ -15,7 +15,7 @@ public class TimeInternalTest {
     @Test
     void canSetHour(){
         timer.sethour(5);
-        assertEquals(5,timer.getHour());
+        assertEquals(5 * 3600,timer.getHour());
     }
     @Test
     void hourCannot_BeZero(){
@@ -27,7 +27,7 @@ public class TimeInternalTest {
     @Test
     void canSetMinute(){
         timer.setMinute(5);
-        assertEquals(5,timer.getMinute());
+        assertEquals(300,timer.getMinute());
     }
     @Test
     void minuteCannot_BeZero() {
@@ -46,8 +46,21 @@ public class TimeInternalTest {
         Exception exception = assertThrows(IllegalArgumentException.class, () -> timer.setSecond(0), "seconds must be between 1 and 60");
         assertEquals("seconds must be between 1 and 60", exception.getMessage());
     }
-//    @Test
-//    void timeCan_beSet(){
-//
-//    }
+    @Test
+    void timeCan_beSet(){
+//        TimeInternal timer = new TimeInternal(24,5,7);
+        timer.sethour(24);
+        assertEquals(86400,timer.getHour());
+//        System.out.println(timer.getHour());
+    }
+    @Test
+    void timeCan_ManyConstructor(){
+        TimeInternal timer = new TimeInternal(4);
+        assertEquals(4*3600,timer.getHour());
+    }
+    @Test
+    void timeIs_internal(){
+
+    }
+
 }

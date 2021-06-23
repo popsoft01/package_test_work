@@ -17,17 +17,17 @@ public class TimeInternal {
     }
 
     public TimeInternal(int hour, int minute, int seconds){
-        if (hour > 0 && hour <= 24){
+        if (hour >= 0 && hour < 24){
             this.hour = hour;
         }else throw new IllegalArgumentException("hour must be between 1 and 24");
 
-        if (minute > 0 && minute <=60){
+        if (minute >= 0 && minute < 60){
             this.minute = minute;
-        }else throw new IllegalArgumentException("Minute must be btw 1 and 60");
+        }else throw new IllegalArgumentException("Minute must be between 1 and 60");
 
-        if (seconds > 0 && seconds <=60){
+        if (seconds >= 0 && seconds <60){
             this.seconds = minute;
-        }else throw new IllegalArgumentException("Second must be btw 1 and 60");
+        }else throw new IllegalArgumentException("Second must be between 1 and 60");
 
     }
 
@@ -38,7 +38,7 @@ public class TimeInternal {
     }
 
     public int getHour() {
-        return hour;
+        return hour * 3600;
     }
 
     public void setMinute(int minute) {
@@ -48,7 +48,7 @@ public class TimeInternal {
     }
 
     public int getMinute() {
-        return minute;
+        return minute * 60;
     }
 
     public void setSecond(int second) {
@@ -60,4 +60,5 @@ public class TimeInternal {
     public int getSecond() {
         return seconds;
     }
+
 }
