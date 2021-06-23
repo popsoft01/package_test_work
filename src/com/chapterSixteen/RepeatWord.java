@@ -21,7 +21,7 @@ public class RepeatWord {
                     count++;
                 }
                 if(count>1)
-                    System.out.println("the word "+word[i]+" occured "+ count+" time");
+                    System.out.println("the word "+ word[i]+" occured "+ count+" time");
             }
 
         }
