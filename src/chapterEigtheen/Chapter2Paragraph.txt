@@ -1,0 +1,1 @@
+Regex that matches one or more consecutive whitespace characters

@@ -24,6 +24,7 @@ public class CountingCharCollection {
 
     public static void main(String[] args) {
        count("aaaabbAAAAcccddd",'a');
+        count("aaaabbAAAAcccddd",'b');
 //        String input = "aaaabbAAAAcccddd";
 //        char search = 'a';
     }
