@@ -73,6 +73,7 @@ public class ManipulatingStream {
                 .stream()
                 .sorted(totalValueComparator)
                 .map(invoice ->String.format("%-30s %-8s", invoice.getPartDescription() , invoice.getInvoiceValue()))
+//                .map(invoice ->String.format("%-8d",invoice.getQuantity()*invoice.getPrice()))
                 .forEach(System.out::println);
 
         //Predicate to set range of values
