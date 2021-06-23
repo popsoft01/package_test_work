@@ -60,7 +60,7 @@ public class Invoice {
 
     public static void printHeader(){
 
-        System.out.println(String.format("%-12s %-30s %-10s %-10s","Part Number","Part Description","Quantity","Price"));
+        System.out.printf("%-12s %-30s %-10s %-10s%n","Part Number","Part Description","Quantity","Price");
     }
 
 
