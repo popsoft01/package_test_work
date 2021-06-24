@@ -1,13 +1,13 @@
 package com.ChapterEight;
 
 public enum LigthColour {
-    RED(20),
-    GREEN(30),
-    YELLOW(30);
+    RED,
+    GREEN,
+    YELLOW;
 
-
-    LigthColour(int duration) {
-    }
+//
+//    LigthColour(int duration) {
+//    }
 
     @Override
     public String toString() {
