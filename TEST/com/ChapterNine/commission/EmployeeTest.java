@@ -1,0 +1,50 @@
+package com.ChapterNine.commission;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+public class EmployeeTest {
+    Employee employee;
+
+    @BeforeEach
+    void startWith(){
+        employee = new Employee();
+    }
+    @Test
+    void EmployeeClassIsAvailable(){
+        assertNotNull(employee);
+    }
+    @Test
+    void firstnameCanBe_Created(){
+        employee.setFirstName("Olu");
+        assertEquals("Olu",employee.getFirstName());
+    }
+
+    @Test
+    void lastNameCanBe_Created(){
+        employee.setLastName("Olu");
+        assertEquals("Olu",employee.getLastName());
+    }
+    @Test
+    void SSNCanBe_Created(){
+        employee.setsocialSecurityNumber("1234");
+        assertEquals("1234",employee.getsocialSecurityNumber());
+    }
+    @Test
+    void SSNCannotBeLessThanSix(){
+//        employee.setsocialSecurityNumber("12344");
+        Exception exception = assertThrows(UnsupportedOperationException.class,() ->employee.setsocialSecurityNumber("12345"),"Social number cannot be less than 6");
+        assertEquals("Social number cannot be less than 6",exception.getMessage());
+//        assertEquals("1234",employee.getsocialSecurityNumber());
+    }
+    @Test
+    void SSNCannotBeGreaterThanSix(){
+//        employee.setsocialSecurityNumber("12344");
+        Exception exception = assertThrows(UnsupportedOperationException.class,() ->employee.setsocialSecurityNumber("12345555"),"Social number cannot be less than 6");
+        assertEquals("Social number cannot be less than 6",exception.getMessage());
+//        assertEquals("1234",employee.getsocialSecurityNumber());
+    }
+
+}
