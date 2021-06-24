@@ -61,4 +61,7 @@ public class TimeInternal {
         return seconds;
     }
 
+    public int internalsecondsTime() {
+        return getHour() + getMinute() + getSecond();
+    }
 }

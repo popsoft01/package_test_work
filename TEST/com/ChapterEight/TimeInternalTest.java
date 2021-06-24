@@ -1,5 +1,6 @@
 package com.ChapterEight;
 
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,6 +11,10 @@ public class TimeInternalTest {
     @BeforeEach
     void start(){
         timer = new TimeInternal(4,5,3);
+    }
+    @AfterEach
+    void tearDown(){
+        timer = null;
     }
 
     @Test
@@ -38,7 +43,7 @@ public class TimeInternalTest {
     }
     @Test
     void secondCan_BeSet(){
-        timer.setSecond(5);
+//        timer.setSecond(5);
         assertEquals(5,timer.getSecond());
     }
     @Test
@@ -59,8 +64,16 @@ public class TimeInternalTest {
         assertEquals(4*3600,timer.getHour());
     }
     @Test
-    void timeIs_internal(){
-
+    void timeIs_internalSeconds(){
+//        TimeInternal timer = new TimeInternal(4,20,20);
+//        System.out.println(timer.getHour());
+//        System.out.println(timer.getMinute());
+//        System.out.println(timer.getSecond());
+        assertEquals((timer.getHour() + timer.getSecond() + timer.getMinute()),timer.internalsecondsTime());
     }
+//    @Test
+//    void newTimeSet(){
+//        assertEquals(((2 * 3600)+(2*60)+2), timer.internalsecondsTime());
+//    }
 
 }
