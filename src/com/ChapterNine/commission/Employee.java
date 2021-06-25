@@ -5,6 +5,15 @@ public class Employee {
     private String lastName;
     private String socialSecurityNumber;
 
+    public Employee(String firstName, String lastName, String socialSecurityNumber) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        if (socialSecurityNumber.length() != 6){
+            throw new UnsupportedOperationException("Social number cannot be less than 6");}
+        this.socialSecurityNumber = socialSecurityNumber;
+
+    }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -23,7 +32,7 @@ public class Employee {
 
     public void setsocialSecurityNumber(String socialSecurityNumber) {
         if (socialSecurityNumber.length() != 6)
-            throw new UnsupportedOperationException("Social number cannot be less than 6");
+            throw new UnsupportedOperationException("invalid Social number");
         else
             this.socialSecurityNumber = socialSecurityNumber;
     }
@@ -31,4 +40,12 @@ public class Employee {
     public String getsocialSecurityNumber() {
         return socialSecurityNumber;
     }
+
+    @Override
+    public String toString(){
+        return String.format("%s %s %s", firstName,lastName,socialSecurityNumber);
+    }
+
+
+
 }

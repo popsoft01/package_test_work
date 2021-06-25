@@ -10,7 +10,7 @@ public class EmployeeTest {
 
     @BeforeEach
     void startWith(){
-        employee = new Employee();
+        employee = new Employee("Olu","Olu","12345655");
     }
     @Test
     void EmployeeClassIsAvailable(){
@@ -35,16 +35,20 @@ public class EmployeeTest {
     @Test
     void SSNCannotBeLessThanSix(){
 //        employee.setsocialSecurityNumber("12344");
-        Exception exception = assertThrows(UnsupportedOperationException.class,() ->employee.setsocialSecurityNumber("12345"),"Social number cannot be less than 6");
-        assertEquals("Social number cannot be less than 6",exception.getMessage());
+        Exception exception = assertThrows(UnsupportedOperationException.class,() ->employee.setsocialSecurityNumber("12345"),"invalid Social number");
+        assertEquals("invalid Social number",exception.getMessage());
 //        assertEquals("1234",employee.getsocialSecurityNumber());
     }
     @Test
     void SSNCannotBeGreaterThanSix(){
 //        employee.setsocialSecurityNumber("12344");
-        Exception exception = assertThrows(UnsupportedOperationException.class,() ->employee.setsocialSecurityNumber("12345555"),"Social number cannot be less than 6");
-        assertEquals("Social number cannot be less than 6",exception.getMessage());
+        Exception exception = assertThrows(UnsupportedOperationException.class,() ->employee.setsocialSecurityNumber("12345555"),"invalid Social number");
+        assertEquals("invalid Social number",exception.getMessage());
 //        assertEquals("1234",employee.getsocialSecurityNumber());
+    }
+    @Test
+    void test(){
+        System.out.println(employee);
     }
 
 }
