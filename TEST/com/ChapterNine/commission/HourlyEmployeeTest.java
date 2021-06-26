@@ -16,4 +16,8 @@ public class HourlyEmployeeTest {
         hour.setHour(3);
         assertEquals(3, hour.getHour());
     }
+    @Test
+    void hourCanNotBeLessThanZero(){
+        Exception exception = assertThrows(hour.setHour(0.0).);
+    }
 }
