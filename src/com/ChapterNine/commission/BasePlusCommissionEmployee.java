@@ -25,5 +25,9 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
     public  double earning(){
         return getBaseSalary() * super.earning();
     }
+    @Override
+    public String toString(){
+        return String.format("%s %s %n %n",getFirstName(),getLastName(),getBaseSalary(),earning());
+    }
 
 }
