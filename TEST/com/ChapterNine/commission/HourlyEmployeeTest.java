@@ -31,4 +31,8 @@ public class HourlyEmployeeTest {
         Exception exception = assertThrows(IllegalArgumentException.class,()->hour.setWage(0.0),"Wage can not be less than Zero");
         assertEquals("Wage can not be less than Zero",exception.getMessage());
     }
+    @Test
+    void canCalculateEarning(){
+        assertEquals(hour.getHour() * hour.getWages(),hour.earnings());
+    }
 }
