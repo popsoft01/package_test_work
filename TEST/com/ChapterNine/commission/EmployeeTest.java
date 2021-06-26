@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class EmployeeTest {
     Employee employee;
-    CommissionEmployee commision = new CommissionEmployee();
+//    CommissionEmployee commision = new CommissionEmployee("Olu","OLu","123456");
 
     @BeforeEach
     void startWith(){
