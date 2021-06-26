@@ -8,10 +8,14 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
         if (baseSalary > 0.0){
             this.baseSalary = baseSalary;
         }
+        else throw new IllegalArgumentException("invalid input");
     }
 
     public void setBaseSalary(double baseSalary) {
-        this.baseSalary = baseSalary;
+        if (baseSalary > 0.0){
+            this.baseSalary = baseSalary;
+        }
+        else throw new IllegalArgumentException("invalid input");
     }
 
     public double getBaseSalary() {
