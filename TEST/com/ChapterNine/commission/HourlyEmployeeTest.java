@@ -18,6 +18,17 @@ public class HourlyEmployeeTest {
     }
     @Test
     void hourCanNotBeLessThanZero(){
-        Exception exception = assertThrows(hour.setHour(0.0).);
+        Exception exception = assertThrows(IllegalArgumentException.class,()->hour.setHour(0.0),"Hour can not be less than Zero");
+        assertEquals("Hour can not be less than Zero",exception.getMessage());
+    }
+    @Test
+    void cansetWages(){
+        hour.setWage(400.0);
+        assertEquals(400, hour.getWages());
+    }
+    @Test
+    void wageCanNotBeLessThanZero(){
+        Exception exception = assertThrows(IllegalArgumentException.class,()->hour.setWage(0.0),"Wage can not be less than Zero");
+        assertEquals("Wage can not be less than Zero",exception.getMessage());
     }
 }
