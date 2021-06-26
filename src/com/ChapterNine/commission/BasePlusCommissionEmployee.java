@@ -21,4 +21,5 @@ public class BasePlusCommissionEmployee extends CommissionEmployee {
     public double getBaseSalary() {
         return baseSalary;
     }
+
 }

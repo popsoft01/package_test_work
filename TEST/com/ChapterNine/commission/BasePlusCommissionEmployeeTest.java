@@ -18,5 +18,9 @@ public class BasePlusCommissionEmployeeTest {
         base.setBaseSalary(200.0);
         assertEquals(200.0,base.getBaseSalary());
     }
+//    @Test
+//    void canCalculateEarning(){
+//        assertEquals(, base.earning());
+//    }
 
 }
