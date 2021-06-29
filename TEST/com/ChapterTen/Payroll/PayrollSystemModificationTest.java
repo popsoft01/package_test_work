@@ -7,32 +7,32 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class PayrollSystemModificationTest {
-    WeeklySalary weeklySalary; //= new WeeklySalary("Olu","Sola","123456");
+    SalaryEmployee salaryEmployee; //= new WeeklySalary("Olu","Sola","123456");
 
     @BeforeEach
     void startEachWith(){
-        weeklySalary = new WeeklySalary("Olu","Sola","123456",200.0);
+        salaryEmployee = new SalaryEmployee("Olu","Sola","123456",200.0);
     }
     @Test
     void canSetFirstname(){
-        assertEquals("Olu",weeklySalary.getFirstName());
+        assertEquals("Olu", salaryEmployee.getFirstName());
     }
     @Test
     void cansetLastName(){
-        assertEquals("Sola",weeklySalary.getLastName());
+        assertEquals("Sola", salaryEmployee.getLastName());
     }
     @Test
     void canSetSSN(){
-        assertEquals("123456",weeklySalary.getSSN());
+        assertEquals("123456", salaryEmployee.getSSN());
     }
     @Test
     void canSetWeeklysalary(){
-        weeklySalary.setWeeklySalary(200.0);
-        assertEquals(200.0,weeklySalary.getWeeklySalary());
+        salaryEmployee.setWeeklySalary(200.0);
+        assertEquals(200.0, salaryEmployee.getWeeklySalary());
     }
     @Test
     void setWeeklySalaryCannotBeLessThanZero(){
-       Exception exception = assertThrows(IllegalArgumentException.class,()->weeklySalary.setWeeklySalary(-2),"invalid salary amount");
+       Exception exception = assertThrows(IllegalArgumentException.class,()-> salaryEmployee.setWeeklySalary(-2),"invalid salary amount");
         assertEquals("invalid salary amount",exception.getMessage() );
     }
 
