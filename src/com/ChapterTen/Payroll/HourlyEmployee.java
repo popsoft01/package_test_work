@@ -47,4 +47,11 @@ public class HourlyEmployee extends  Employee {
             hourWage = 40 * wage + (hour - 40) * wage * 1.5;
         return hourWage;
     }
+
+    @Override
+    public String toString() {
+        return "HourlyEmployee{" +
+                "hour=" + hour +
+                ", wage=" + wage + " earning =" + earning();
+    }
 }

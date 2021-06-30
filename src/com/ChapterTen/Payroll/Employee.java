@@ -23,5 +23,10 @@ public abstract class Employee {
     public String getSSN() {
         return socialSecurityNumber;
     }
+
+    @Override
+    public String toString(){
+        return String.format("%s %s %s",firstName,lastName,socialSecurityNumber);
+    }
     public abstract double earning();
 }
