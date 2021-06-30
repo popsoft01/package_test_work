@@ -9,11 +9,15 @@ public class CommissionEmployees extends Employee{
         if (commissionRate > 0.0 && commissionRate <= 1.0)
             this.commissionRate = commissionRate;
         else throw new IllegalArgumentException("Commission rate is invalid");
+
+        if (grossSale > 0.0)
+            this.grossSales = grossSale;
+        else throw new IllegalArgumentException("Gross sale must be greater than 0");
     }
 
     @Override
     public double earning() {
-        return 0;
+        return getGrossSales() * getCommissionRate();
     }
 
     public void setCommissionRate(double commissionRate) {
@@ -26,12 +30,18 @@ public class CommissionEmployees extends Employee{
         return commissionRate;
     }
 
-    public void setGrossSales(double commissionRate) {
-        if (commissionRate > 0.0)
-            this.commissionRate = commissionRate;
+    public void setGrossSales(double grossSales) {
+        if (grossSales > 0.0)
+            this.grossSales = grossSales;
+        else throw new IllegalArgumentException("Gross sale must be greater than 0");
     }
 
     public double getGrossSales() {
         return grossSales;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + " Earning =" + earning();
     }
 }

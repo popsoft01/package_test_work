@@ -23,4 +23,12 @@ public class CommissionEmployeeTest {
         assertEquals(0.05,commissionEmployee.getGrossSales());
 
     }
+    @Test
+    void canCalculateEarning(){
+       assertEquals(commissionEmployee.getCommissionRate() *commissionEmployee.getGrossSales(), commissionEmployee.earning());
+    }
+    @Test
+    void test(){
+        System.out.println(commissionEmployee);
+    }
 }
