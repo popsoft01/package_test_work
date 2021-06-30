@@ -33,4 +33,9 @@ public class HourlyEmployeeTest {
         HourlyEmployee hourlyEmployee2 = new HourlyEmployee("bola","Tope","123456",50,300);
         assertEquals(40 * hourlyEmployee2.getWage() + (hourlyEmployee2.getHour()-40) *hourlyEmployee2.getWage() *1.5, hourlyEmployee2.earning());}
 
+    @Test
+    void  test(){
+        System.out.println(hourlyEmployee);
+    }
+
 }

@@ -52,6 +52,6 @@ public class HourlyEmployee extends  Employee {
     public String toString() {
         return "HourlyEmployee{" +
                 "hour=" + hour +
-                ", wage=" + wage + " earning =" + earning();
+                ", wage=" + wage + " earning =" + earning() + " }";
     }
 }
