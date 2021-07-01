@@ -1,11 +1,14 @@
 package com.ChapterTen.Payroll;
 
+import com.ChapterEight.Date;
+
 public class CommissionEmployees extends Employee{
+
     private double commissionRate;
     private double grossSales;
 
     public CommissionEmployees(String firstName, String lastName, String ssn, double commissionRate, double grossSale) {
-        super(firstName, lastName, ssn);
+        super(firstName, lastName, ssn, getBirthday());
         if (commissionRate > 0.0 && commissionRate <= 1.0)
             this.commissionRate = commissionRate;
         else throw new IllegalArgumentException("Commission rate is invalid");

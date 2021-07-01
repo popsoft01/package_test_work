@@ -7,7 +7,7 @@ public class HourlyEmployee extends  Employee {
     private double wage;
 
     public HourlyEmployee(String firstName, String lastName, String ssn, double hour, double wage) {
-        super(firstName, lastName, ssn);
+        super(firstName, lastName, ssn, birthday);
         if (hour >= 0.0){
         this.hour = hour;}
         else throw new IllegalArgumentException("Hour cannot be less than zero");

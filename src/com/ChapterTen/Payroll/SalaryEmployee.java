@@ -6,7 +6,7 @@ public class SalaryEmployee extends Employee {
     private double weeklySalary;
 
     public SalaryEmployee(String firstName, String lastName, String SSN, double weeklySalary) {
-        super(firstName,lastName,SSN);
+        super(firstName,lastName,SSN, birthday);
         if (weeklySalary >0.0){
             this.weeklySalary = weeklySalary;}
         else throw new IllegalArgumentException("invalid salary amount");
