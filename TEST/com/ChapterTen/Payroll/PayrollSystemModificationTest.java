@@ -13,7 +13,7 @@ public class PayrollSystemModificationTest {
 
     @BeforeEach
     void startEachWith(){
-        salaryEmployee = new SalaryEmployee("Olu","Sola","123456",200.0, birthday);
+        salaryEmployee = new SalaryEmployee("Olu","Sola","123456", birthday);
     }
     @Test
     void canSetFirstname(){

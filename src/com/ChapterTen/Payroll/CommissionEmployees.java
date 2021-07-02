@@ -7,16 +7,21 @@ public class CommissionEmployees extends Employee{
     private double commissionRate;
     private double grossSales;
 
-    public CommissionEmployees(String firstName, String lastName, String ssn, double commissionRate, double grossSale) {
-        super(firstName, lastName, ssn, getBirthday());
-        if (commissionRate > 0.0 && commissionRate <= 1.0)
+    public CommissionEmployees(String firstName, String lastName, String ssn, Date birthday, double grossSales, double commissionRate) {
+        super(firstName, lastName, ssn, birthday);
+        if (commissionRate > 0.0 && commissionRate < 1.0) {
             this.commissionRate = commissionRate;
-        else throw new IllegalArgumentException("Commission rate is invalid");
+        } else {
+            throw new IllegalArgumentException("Commission rate must be > 0.0 and < 1.0");
+        }
 
-        if (grossSale > 0.0)
-            this.grossSales = grossSale;
-        else throw new IllegalArgumentException("Gross sale must be greater than 0");
+        if (grossSales >= 0.0) {
+            this.grossSales = grossSales;
+        } else {
+            throw new IllegalArgumentException("Gross sales must be >= 0.0");
+        }
     }
+
 
     @Override
     public double earning() {

@@ -1,36 +1,40 @@
 package com.ChapterTen.Payroll;
 
+import com.ChapterEight.Date;
+
 public class HourlyEmployee extends  Employee {
-
-
-    private double hour;
+    private double hours;
     private double wage;
 
-    public HourlyEmployee(String firstName, String lastName, String ssn, double hour, double wage) {
+    public HourlyEmployee(String firstName, String lastName, String ssn, Date birthday, double hours, double wages) {
         super(firstName, lastName, ssn, birthday);
-        if (hour >= 0.0){
-        this.hour = hour;}
-        else throw new IllegalArgumentException("Hour cannot be less than zero");
-        if (hour >= 0.0){
-            this.wage = wage;}
-        else throw new IllegalArgumentException("Hour cannot be less than zero");
-
+        if (hours <= 0.0) {
+            throw new IllegalArgumentException("hour can not be less than or equal to zero");
+        } else {
+            this.hours = hours;
+        }
+        if (wage <= 0.0) {
+            throw new IllegalArgumentException("wage can not be less than or equal to zero");
+        } else {
+            this.wage = wage;
+        }
     }
 
+
     public void setHour(double hour) {
-        if (hour >= 0.0){
-            this.hour = hour;}
-        else throw new IllegalArgumentException("Hour cannot be less than zero");
+        if (hour >= 0.0) {
+            this.hours = hour;
+        } else throw new IllegalArgumentException("Hour cannot be less than zero");
     }
 
     public double getHour() {
-        return hour;
+        return hours;
     }
 
     public void setWage(double wage) {
-        if (hour >= 0.0){
-            this.wage = wage;}
-        else throw new IllegalArgumentException("Hour cannot be less than zero");
+        if (hours >= 0.0) {
+            this.wage = wage;
+        } else throw new IllegalArgumentException("Hour cannot be less than zero");
 
     }
 
@@ -39,19 +43,20 @@ public class HourlyEmployee extends  Employee {
     }
 
     @Override
-    public double earning() {
-        double hourWage= 0;
-        if (hour <= 40)
-            hourWage = wage * hour;
-        else if (hour > 40)
-            hourWage = 40 * wage + (hour - 40) * wage * 1.5;
-        return hourWage;
+    public double earning(){
+        double earning = 0.0;
+        if (hours <= 40) {
+            earning = wage * hours;
+        } else if (hours > 40) {
+          earning =  (40 * wage + (hours - 40) * wage * 1.5);
+        }
+        return earning;
     }
 
     @Override
     public String toString() {
         return "HourlyEmployee{" +
-                "hour=" + hour +
+                "hour=" + hours +
                 ", wage=" + wage + " earning =" + earning() + " }";
     }
 }
