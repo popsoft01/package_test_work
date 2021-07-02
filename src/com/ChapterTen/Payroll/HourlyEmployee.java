@@ -13,10 +13,10 @@ public class HourlyEmployee extends  Employee {
         } else {
             this.hours = hours;
         }
-        if (wage <= 0.0) {
+        if (wages <= 0.0) {
             throw new IllegalArgumentException("wage can not be less than or equal to zero");
         } else {
-            this.wage = wage;
+            this.wage = wages;
         }
     }
 
@@ -55,8 +55,6 @@ public class HourlyEmployee extends  Employee {
 
     @Override
     public String toString() {
-        return "HourlyEmployee{" +
-                "hour=" + hours +
-                ", wage=" + wage + " earning =" + earning() + " }";
+        return "HourlyEmployee{" + "Name is " + getFirstName() + " lastname " + getLastName() + " hour= " + hours + ", wage= " + wage + " earning =" + earning() + " }";
     }
 }

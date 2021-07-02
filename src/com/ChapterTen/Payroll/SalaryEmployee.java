@@ -6,7 +6,7 @@ import com.ChapterEight.Date;
 public class SalaryEmployee extends Employee {
     private double weeklySalary;
 
-    public SalaryEmployee(String firstName, String lastName, String ssn, Date birthday) {
+    public SalaryEmployee(String firstName, String lastName, String ssn, Date birthday,double weeklySalary) {
         super(firstName, lastName, ssn, birthday);
         if (weeklySalary > 0.0){
             this.weeklySalary = weeklySalary;}
@@ -25,7 +25,8 @@ public class SalaryEmployee extends Employee {
 
     public void setWeeklySalary(double weeklySalary) {
         if (weeklySalary >0.0){
-        this.weeklySalary = weeklySalary;}
+            this.weeklySalary = weeklySalary;
+        }
         else throw new IllegalArgumentException("invalid salary amount");
     }
 

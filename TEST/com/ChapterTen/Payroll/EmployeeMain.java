@@ -8,7 +8,7 @@ public class EmployeeMain {
         Date date2 = new Date(9,04,2000);
         Date date3 = new Date(5,5,2003);
         Date date4 = new Date(4,9,2005);
-        SalaryEmployee salaryEmployee = new SalaryEmployee("ola","bola","234567",date);
+        SalaryEmployee salaryEmployee = new SalaryEmployee("ola","bola","234567",date,300.0);
         CommissionEmployees commissionEmployees = new CommissionEmployees("zuko","francis","123456",date2,200.0,0.4);
         HourlyEmployee hourlyEmployee = new HourlyEmployee("Bola","Ade","345689",date3,46,400.0);
         BasePlusEmployee basePlusEmployee = new BasePlusEmployee("Ola", "Bolato","12348",date4,300,0.6,300);
