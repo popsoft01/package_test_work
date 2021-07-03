@@ -1,6 +1,6 @@
 package com.ChapterTen.shape;
 
-public class TwoDemimentionShape extends Shape{
+public abstract class TwoDemimentionShape extends Shape{
 
 
     private double radius;
@@ -17,8 +17,15 @@ public class TwoDemimentionShape extends Shape{
         }
     }
 
-    @Override
-    public double getArea() {
+    public double getRadius() {
+        return radius;
+    }
 
+    @Override
+    public abstract double getArea();
+
+    @Override
+    public String toString() {
+        return super.toString() + " redius " + getRadius();
     }
 }

@@ -12,8 +12,8 @@ public class ShapeTest {
     TwoDemimentionShape twoDemimentionShape2;
     @BeforeEach
     void startEachWith(){
-        twoDemimentionShape = new TwoDemimentionShape();
-        twoDemimentionShape2 = new TwoDemimentionShape(10,20,4);
+//        twoDemimentionShape = new TwoDemimentionShape();
+//        twoDemimentionShape2 = new TwoDemimentionShape(10,20,4);
     }
     @Test
     void CanSetgetlength(){
