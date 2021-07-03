@@ -6,8 +6,11 @@ public class Sphere extends  ThreeDymationShape{
     public Sphere() {
     }
 
-    public Sphere(double length, double width) {
+    public Sphere(double length, double width,double radius) {
         super(length, width);
+        if (radius > 0.0){
+            this.radius = radius;
+        }
     }
 
     @Override
