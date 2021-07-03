@@ -36,6 +36,6 @@ public class SalaryEmployee extends Employee {
 
     @Override
     public String toString() {
-        return String.format("%s %s :  %n",getFirstName(),getLastName(),earning());
+        return String.format("%s %s :  %s",getFirstName(),getLastName(),earning());
     }
 }
