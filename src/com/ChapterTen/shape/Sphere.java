@@ -30,6 +30,12 @@ public class Sphere extends  ThreeDymationShape{
 
     @Override
     public double getVolume() {
-        return (4/3)*Math.PI *Math.pow(radius,3);
+        return (4/3.0)*Math.PI *Math.pow(radius,3);
+    }
+
+    @Override
+    public String toString() {
+        return "Sphere{" +
+                "radius=" + radius + " Length " + getLength() + " width " + getWidth() + " Volume " + getVolume() + " Area " + getArea() + '}';
     }
 }
