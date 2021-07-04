@@ -3,14 +3,24 @@ package com.ChapterTen.shape;
 public class Sphere extends  ThreeDymationShape{
 
 
+    private double radius;
+
     public Sphere() {
     }
 
-    public Sphere(double length, double width,double radius) {
+    public double getRadius() {
+        return radius;
+    }
+
+    public Sphere(double length, double width, double radius) {
         super(length, width);
         if (radius > 0.0){
             this.radius = radius;
         }
+    }
+
+    public void setRadius(double radius) {
+        this.radius = radius;
     }
 
     @Override
