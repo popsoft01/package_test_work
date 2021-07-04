@@ -16,11 +16,17 @@ public class Sphere extends  ThreeDymationShape{
         super(length, width);
         if (radius > 0.0){
             this.radius = radius;
+        }else {
+            throw new IllegalArgumentException("Radius cannot be Zero of less");
         }
     }
 
     public void setRadius(double radius) {
-        this.radius = radius;
+        if (radius > 0.0){
+            this.radius = radius;
+        }else {
+            throw new IllegalArgumentException("Radius cannot be Zero of less");
+        }
     }
 
     @Override
