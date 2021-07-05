@@ -140,6 +140,18 @@ public class Kata {
         n2 = temp;
         System.out.println(n2+" "+n1+"  "+temp);
     }
+
+    public double nterm(double firstNumber, double numberOfTimes, double difference ) {
+        return firstNumber + (numberOfTimes-1)* difference;
+    }
+
+    public double series(double...number){
+        for (int i = 0; i < number.length; i++){
+            if ( number[i] - number[i+1] == ){
+
+            }
+        }
+
 //    public char[] charArray(char[] chars){
 //        SecureRandom random = new SecureRandom();
 //        for (int i =0; i< chars.length;i++){
