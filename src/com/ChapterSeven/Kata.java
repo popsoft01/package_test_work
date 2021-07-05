@@ -146,8 +146,12 @@ public class Kata {
     }
 
     public double series(double...number){
+        double difference =  number[0] - number[1];
         for (int i = 0; i < number.length; i++){
-            if ( number[i] - number[i+1] == ){
+            if ( number[i] - number[i+1] == difference){
+                double lastNumber = number[number.length - 1] + difference;
+            }
+
 
             }
         }
