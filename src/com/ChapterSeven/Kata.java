@@ -146,14 +146,15 @@ public class Kata {
     }
 
     public double series(double...number){
-        double difference =  number[0] - number[1];
-        for (int i = 0; i < number.length; i++){
-            if ( number[i] - number[i+1] == difference){
-                double lastNumber = number[number.length - 1] + difference;
+        double difference =  number[1] - number[0];
+        double lastNumber = 0;
+        for (int i = 0; i < number.length-1; i++){
+            if (number[i + 1] - number[i] == difference) {
+                lastNumber = number[number.length - 1] + difference;
+                break;
             }
-
-
             }
+        return lastNumber;
         }
 
 //    public char[] charArray(char[] chars){

@@ -56,5 +56,10 @@ public abstract class Shape {
 
 
     public void setLength(int length) {
+        if (length < 0.0){
+            throw new IllegalArgumentException("Length must be greater 0.0");
+        }else{
+            this.length = length;
     }
+}
 }
