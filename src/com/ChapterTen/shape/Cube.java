@@ -9,6 +9,12 @@ public class Cube extends ThreeDymationShape{
         super(length, width);
     }
 
+
+    @Override
+    public String toString() {
+        return "Cube" + "{" + "Edge :" +getLength() + " Volume " + getVolume() + " Area " + getArea()  + " }";
+    }
+
     @Override
     public double getArea() {
         double edge = getLength();

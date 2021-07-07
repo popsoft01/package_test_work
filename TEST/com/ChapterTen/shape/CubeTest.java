@@ -19,4 +19,8 @@ public class CubeTest {
     void  canCalculateVolume(){
         assertEquals(8,cube.getVolume());
     }
+    @Test
+    void start(){
+        System.out.println(cube);
+    }
 }
