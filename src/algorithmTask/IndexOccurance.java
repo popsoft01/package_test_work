@@ -15,12 +15,28 @@ public class IndexOccurance {
         System.out.println("first Index " + firstNumber);
         System.out.print("last Number " +lastNumber);
     }
+    public static void startAndEndElementOccurenceWithTwoLoop(int[] array,int value){
+            int firstNumber = -1;
+            int lastNumber = -1;
+            for (int counter = 0; counter < array.length;counter++){
+                for (int back = array.length; back >0;back--){
+                    if (array[counter] == value && array[back-1] ==value){
+                        firstNumber = counter;
+                        lastNumber = back;
+                    }
+                }
+            }
+        System.out.println("first Index " + firstNumber);
+        System.out.print("last Number " +lastNumber);
+    }
     public static void intersect(String[] array){
 
     }
 
     public static void main(String[] args) {
         int[] array ={0,0,1,1,1,1,1,1,4,6,7,4};
-        startAndEndElementOccurence(array,8);
+//        startAndEndElementOccurence(array,8);
+        startAndEndElementOccurenceWithTwoLoop(array,1);
+
     }
 }
