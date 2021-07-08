@@ -7,7 +7,7 @@ public class Invoice implements Payable {
     private int quantity;
 
 
-    public Invoice(String partNumber, String productDescription, int quantity, int pricePerItem) {
+    public Invoice(String partNumber, String productDescription, int quantity, double pricePerItem) {
         if (quantity > 0){
             this.quantity =quantity;
         }else {throw new IllegalArgumentException("Quantity cannot be less than 0");}
@@ -35,6 +35,16 @@ public class Invoice implements Payable {
 
     public String getProductDescription() {
         return productDescription;
+    }
+
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "partNumber='" + partNumber + '\'' +
+                ", productDescription='" + productDescription + '\'' +
+                ", pricePerItem=" + pricePerItem +
+                ", quantity=" + quantity +
+                '}';
     }
 
     public double getPricePerItem() {

@@ -25,10 +25,6 @@ public class SalaryEmployee extends Employee{
         else throw new IllegalArgumentException("invalid salary amount");
     }
 
-
-
-
-
     @Override
     public String toString() {
         return String.format("%s %s :  %s",getFirstName(),getLastName(),getPaymentAmount());

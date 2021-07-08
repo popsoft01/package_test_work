@@ -44,10 +44,10 @@ public abstract class Employee implements Payable{
         @Override
         public String toString() {
             return "Employee{" +
-                    "firstName='" + firstName + '\'' +
-                    ", lastName='" + lastName + '\'' +
-                    ", socialSecurityNumber='" + socialSecurityNumber + '\'' +
-                    ", birthday=" + birthday +
+                    "firstName='" + getFirstName() + '\'' +
+                    ", lastName='" + getLastName() + '\'' +
+                    ", socialSecurityNumber='" + getSSN() + '\'' +
+                    ", birthday=" + getBirthday() +
                     '}';
         }
 
