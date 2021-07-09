@@ -2,7 +2,7 @@ package com.ChapterTen.Payroll;
 
 import com.ChapterEight.Date;
 
-public abstract class Employee{
+public abstract class Employee implements Payable{
 
     private String firstName;
     private String lastName;
