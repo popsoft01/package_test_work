@@ -2,7 +2,7 @@ package com.ChapterTen.Payroll;
 
 import com.ChapterEight.Date;
 
-public abstract class Employee {
+public abstract class Employee implements Payable{
 
     private String firstName;
     private String lastName;
@@ -29,6 +29,11 @@ public abstract class Employee {
         return lastName;
     }
 
+    @Override
+    public void getPaymentAmount() {
+        earning();
+    }
+
     public String getSSN() {
         return socialSecurityNumber;
     }
@@ -40,6 +45,8 @@ public abstract class Employee {
     public Date getBirthday() {
         return birthday;
     }
+
+
 
     @Override
     public String toString() {
