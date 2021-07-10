@@ -50,13 +50,30 @@ public class IndexOccurance {
         }
 
     }
+    public static void manipulationArray(int[] array){
+        int[] newArray = new int[array.length];
+
+        for (int i = 0; i < array.length; i++){
+            int product = 1;
+            for (int j = 0; j <array.length;j++){
+                if (i==j){
+                    continue;
+                }else {
+                product *= array[i];}
+            }
+            newArray[i]= product;
+        }
+        System.out.println(Arrays.toString(newArray));
+    }
 
     public static void main(String[] args) {
-        int[] array ={0,0,1,1,1,1,1,1,4,6,7,4};
+//        int[] array ={0,0,1,1,1,1,1,1,4,6,7,4};
+        int[] number = {2,4,6,8};
         String[] num = {"0,2,3,4,6,11","0,1,4,9,10,11"};
 //        startAndEndElementOccurence(array,8);
 //        startAndEndElementOccurenceWithTwoLoop(array,1);
-        intersect(num);
+//        intersect(num);
+        manipulationArray(number);
 
     }
 }
