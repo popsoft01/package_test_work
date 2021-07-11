@@ -1,6 +1,6 @@
 package com.ChapterTen.carbon;
 
-public class Bicycle implements CarbonFootprint{
+public class Car implements CarbonFootprint{
     @Override
     public void getCarbonFootprint() {
 
