@@ -16,4 +16,9 @@ public class CarbonBicycleTest {
         bicycle.setSpeed(12);
         assertEquals(12, bicycle.getSpeed());
     }
+    @Test
+    void canSetGear(){
+        bicycle.setGear(10);
+        assertEquals(10,bicycle.getGear());
+    }
 }

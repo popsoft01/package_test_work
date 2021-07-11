@@ -2,6 +2,7 @@ package com.ChapterTen.carbon;
 
 public class Bicycle implements CarbonFootprint{
     private double speed;
+    private double gear;
 
     public Bicycle(int speed, int gear) {
 
@@ -18,5 +19,13 @@ public class Bicycle implements CarbonFootprint{
 
     public double getSpeed() {
         return speed;
+    }
+
+    public void setGear(double gear) {
+        this.gear = gear;
+    }
+
+    public double getGear() {
+        return gear;
     }
 }
