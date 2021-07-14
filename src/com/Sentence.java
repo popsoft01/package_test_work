@@ -13,4 +13,12 @@ public class Sentence {
         rand = new SecureRandom();
         return noun[rand.nextInt(noun.length)];
     }
+    public static String generateVerb(String[] verb){
+        rand = new SecureRandom();
+        return verb[rand.nextInt(verb.length)];
+    }
+    public static String generatePreposition(String[] preposition){
+        rand = new SecureRandom();
+        return preposition[rand.nextInt(preposition.length)];
+    }
 }
