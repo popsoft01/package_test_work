@@ -14,7 +14,9 @@ public class PinginLatinTest {
     }
     @Test
     void sententenceCan_BeSplit(){
-       pigLatin.sentenceToken("Olu is a Boy");
+//       pigLatin.sentenceToken("Olu is a Boy");
+//       pigLatin.stringToChar(pigLatin.sentenceToken("Olu is a Boy"));
 //        assertEquals("Olu",pigLatin.getTokenNizeSentence());
+        pigLatin.sentenceToken("Olu is a Boy");
     }
 }

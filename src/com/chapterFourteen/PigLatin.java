@@ -1,6 +1,5 @@
 package com.chapterFourteen;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class PigLatin {
@@ -8,14 +7,15 @@ public class PigLatin {
     public void sentenceToken(String sentence) {
        String[] word = sentence.split(" ");
         System.out.println(Arrays.toString(word));
-        stringToChar(word);
+        char[] newChar = stringToChar(word);
     }
 
-    private void stringToChar(String[] word) {
+    private char[] stringToChar(String[] word) {
+        char[] letter = new char[word.length];
         for (int i = 0; i < word.length; i++){
-            char[] letter = word[i].toCharArray();
-
-
+            letter = word[i].toCharArray();
+            System.out.println(Arrays.toString(letter));
         }
+        return letter;
     }
 }
