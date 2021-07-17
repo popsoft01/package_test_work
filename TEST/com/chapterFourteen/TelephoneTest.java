@@ -29,5 +29,9 @@ public class TelephoneTest {
     void canGetLastfourElement(){
         assertEquals("9886",telephone.tokenLastFourSplit());
     }
+    @Test
+    void canConcateFirstndexAndLast(){
+        assertEquals("+2349886",telephone.tokenConcat());
+    }
 
 }

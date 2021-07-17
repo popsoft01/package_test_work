@@ -34,6 +34,10 @@ public class Telephone {
     }
 
     public String tokenLastFourSplit() {
-        return tokenLastSplit().substring(6);
+        return tokenLastSplit().substring(5);
+    }
+
+    public String tokenConcat() {
+        return tokenSplit().concat(tokenLastFourSplit());
     }
 }
