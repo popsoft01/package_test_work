@@ -23,4 +23,17 @@ public class Telephone {
       }
       return firstIndex;
     }
+
+    public String tokenLastSplit() {
+        String  lastIndex = " ";
+        String[] newToken = getPhonenumber().split(" ");
+        for (int i = 0; i < newToken.length; i++){
+            lastIndex = newToken[newToken.length-1];
+        }
+        return lastIndex;
+    }
+
+    public String tokenLastFourSplit() {
+        return tokenLastSplit().substring(6);
+    }
 }

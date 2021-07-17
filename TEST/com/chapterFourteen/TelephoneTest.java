@@ -21,5 +21,13 @@ public class TelephoneTest {
     void canCansplitToToken(){
         assertEquals("+234",telephone.tokenSplit());
     }
+    @Test
+    void canCansplitTheToToken(){
+        assertEquals("3857-9886",telephone.tokenLastSplit());
+    }
+    @Test
+    void canGetLastfourElement(){
+        assertEquals("9886",telephone.tokenLastFourSplit());
+    }
 
 }
