@@ -10,12 +10,16 @@ public class TelephoneTest {
 
     @BeforeEach
     void startEach_with(){
-        telephone = new Telephone();
+        telephone = new Telephone("+234 3857-9886");
     }
     @Test
     void can_setPhoneNumber(){
         telephone.setPhoneNumber("+234 3857-9886");
         assertEquals("+234 3857-9886",telephone.getPhonenumber());
+    }
+    @Test
+    void canCansplitToToken(){
+        assertEquals("+234",telephone.tokenSplit());
     }
 
 }
