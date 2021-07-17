@@ -3,6 +3,8 @@ package com.chapterFourteen;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 public class TelephoneTest {
     Telephone telephone;
 
@@ -13,6 +15,7 @@ public class TelephoneTest {
     @Test
     void can_setPhoneNumber(){
         telephone.setPhoneNumber("+234 3857-9886");
+        assertEquals("+234 3857-9886",telephone.getPhonenumber());
     }
 
 }
