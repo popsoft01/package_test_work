@@ -37,6 +37,13 @@ public class Telephone {
         return tokenLastSplit().substring(5);
     }
 
+    @Override
+    public String toString() {
+        return "Telephone{" +
+                "phoneNumber='" + getPhonenumber() + '\'' + " first Four String= " + tokenSplit() + " Join first and last= " + tokenConcat() +
+                '}';
+    }
+
     public String tokenConcat() {
         return tokenSplit().concat(tokenLastFourSplit());
     }

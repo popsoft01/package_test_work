@@ -33,5 +33,9 @@ public class TelephoneTest {
     void canConcateFirstndexAndLast(){
         assertEquals("+2349886",telephone.tokenConcat());
     }
+    @Test
+    void start(){
+        System.out.println(telephone);
+    }
 
 }
