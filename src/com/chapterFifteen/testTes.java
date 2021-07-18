@@ -12,7 +12,7 @@ public class testTes {
                 FileOutputStream output = new FileOutputStream("temp.dat");
         ) {
 // Output values to the file
-            for (int i = 1; i <= 10; i++)
+            for (int i = 1; i <= 20; i++)
                 output.write(i);
         }
         try (
@@ -20,7 +20,7 @@ public class testTes {
         ) {
 //// Read values from the file
             int value;
-            while ((value = input.read()) != -1)
+            while ((value = input.read()) != 20)
                 System.out.print(value + " ");
         }
 
