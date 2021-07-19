@@ -12,7 +12,11 @@ public class NewLInkList {
         list.add("Biola");
         list.add("Tutu");
 
-        System.out.println("");
-        list.size();
+        System.out.println("number of element in the array");
+        System.out.printf("%s",list.size());
+        System.out.println();
+
+        System.out.println("element");
+        for (String s : list) System.out.println(s);
     }
 }
