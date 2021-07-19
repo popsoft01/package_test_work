@@ -10,12 +10,11 @@ public class Arraylist {
         String[] colours ={"MAGENTA", "RED", "WHITE", "BLUE", "CYAN"};
         List<String> list = new ArrayList<>(Arrays.asList(colours));
 
-        String[] removeColors = {"RED", "WHITE", "BLUE"};
+        String[] removeColors = {"MAGENTA", "WHITE", "BLUE"};
         List<String> removeList = new ArrayList<>(Arrays.asList(removeColors));
 
         System.out.println("ArrayList");
-        for (int count = 0; count < list.size();count++)
-            System.out.printf("%s ", list.get(count));
+        for (String s : list) System.out.printf("%s ", s);
 
         removeColors(list, removeList);
 
