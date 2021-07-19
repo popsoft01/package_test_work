@@ -18,5 +18,8 @@ public class NewLInkList {
 
         System.out.println("element");
         for (String s : list) System.out.println(s);
+
+        for (String s : list)
+            list.toArray();
     }
 }
