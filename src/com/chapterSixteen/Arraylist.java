@@ -18,14 +18,14 @@ public class Arraylist {
             System.out.printf("%s ", list.get(count));
 
         removeColors(list, removeList);
+
+        System.out.printf("%n%nArrayList after calling removeColors:%n");
+        for (String color : list)
+            System.out.printf("%s ", color);
     }
 
     private static void removeColors(List<String> list, List<String> removeList) {
-        Iterator<String> iterator = (Iterator<String>) list.iterator();
 
-        while (iterator.hasNext()){
-            if (removeList.contains(iterator.next()))
-                iterator.remove();
-        }
+        list.removeIf(removeList::contains);
     }
 }
