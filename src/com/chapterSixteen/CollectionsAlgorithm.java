@@ -15,8 +15,7 @@ public class CollectionsAlgorithm {
         System.out.println("Manimum character is:");
         System.out.println(Collections.min(listRef));
     }
-    public static void copy(List<Character> list){
-        List<Character> newList = new LinkedList<>();
+    public static void copy(List<Character> list,List<Character> newList){
         Collections.copy(newList,list);
     }
 
@@ -29,8 +28,8 @@ public class CollectionsAlgorithm {
         Character[] letters = {'P', 'C', 'M'};
         List<Character> list = Arrays.asList(letters);
         output(list);
-        List<Character> refList = new LinkedList<>();
-        copy(refList);
-        output(refList);
+//        List<Character> refList = new LinkedList<>();
+//        copy(refList,list);
+//        output(refList);
     }
 }
