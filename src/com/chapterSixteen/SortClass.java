@@ -12,11 +12,19 @@ public class SortClass {
         System.out.printf("Unsorted array elements: %s%n", list);
 //        Iterator<String> newList = list.iterator();
 //        System.out.println(Arrays.toString(newList));
-        Collections.sort(list);
-        System.out.println(list);
+        listSort(list);
 
+        listSortedReverse(list);
+
+    }
+
+    private static void listSortedReverse(List<String> list) {
         list.sort(Collections.reverseOrder());
         System.out.println(list);
+    }
 
+    private static void listSort(List<String> list) {
+        Collections.sort(list);
+        System.out.println(list);
     }
 }
