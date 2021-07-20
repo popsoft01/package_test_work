@@ -22,6 +22,7 @@ public class CollectionsAlgorithm {
     public static void refill(List<Character> list, char put){
         Collections.fill(list, put);
         System.out.println("Element new fill is: ");
+        output(list);
     }
 
     public static void main(String[] args) {
@@ -31,5 +32,6 @@ public class CollectionsAlgorithm {
 //        List<Character> refList = new LinkedList<>();
 //        copy(refList,list);
 //        output(refList);
+        refill(list,'K');
     }
 }
