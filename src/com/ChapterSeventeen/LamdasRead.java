@@ -8,7 +8,11 @@ public class LamdasRead {
         int[] values = {3, 10, 6, 1, 4, 8, 2, 5, 9, 7};
 
         printStream(values);
+        System.out.println();
         checkSize(values);
+        System.out.println();
+        checkMin(values);
+        checkMax(values);
 
     }
 
@@ -18,7 +22,12 @@ public class LamdasRead {
     }
     public static void checkSize(int[] values){
         System.out.println("Array size " + IntStream.of(values).count());
-
+    }
+    public static void checkMin(int[] values){
+        System.out.println("Array size " + IntStream.of(values).min().getAsInt());
+    }
+    public static void checkMax(int[] values){
+        System.out.println("Array size " + IntStream.of(values).max().getAsInt());
     }
 }
 
