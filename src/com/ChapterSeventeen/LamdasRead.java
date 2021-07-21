@@ -15,6 +15,10 @@ public class LamdasRead {
         checkMax(values);
         checkAvarage(values);
         checkReduceOne(values);
+        checkReduceTwo(values);
+        checkSortedEven(values);
+        System.out.println();
+        checkSortedOdd(values);
 
     }
 
@@ -38,7 +42,23 @@ public class LamdasRead {
         System.out.println("Array size " + IntStream.of(values).reduce(0, Integer::sum));
     }
     public static void checkReduceTwo(int[] values){
-        System.out.println("Array size " + IntStream.of(values).reduce(0, (x,y)->x*y));
+        System.out.println("Array size " + IntStream.of(values).reduce(1, (x,y)->x*y));
+    }
+    public static void checkSortedEven(int[] values){
+        IntStream.of(values)
+                .filter(value -> value % 2 ==0)
+                .map(value -> value * 10)
+                .sorted()
+                .forEach(value -> System.out.printf("%d ", value));
+
+    }
+    public static void checkSortedOdd(int[] values){
+        IntStream.of(values)
+                .filter(value -> value % 2 !=0)
+//                .map(value -> value * 10)
+                .sorted()
+                .forEach(value -> System.out.printf("%d ", value));
+
     }
 
 }
