@@ -13,6 +13,7 @@ public class LamdasRead {
         System.out.println();
         checkMin(values);
         checkMax(values);
+        checkAvarage(values);
 
     }
 
@@ -29,5 +30,9 @@ public class LamdasRead {
     public static void checkMax(int[] values){
         System.out.println("Array size " + IntStream.of(values).max().getAsInt());
     }
+    public static void checkAvarage(int[] values){
+        System.out.println("Array size " + IntStream.of(values).average().getAsDouble());
+    }
+
 }
 
