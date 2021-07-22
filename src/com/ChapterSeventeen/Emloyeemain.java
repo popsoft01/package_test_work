@@ -1,10 +1,9 @@
 package com.ChapterSeventeen;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 import java.util.function.Function;
 import java.util.function.Predicate;
+import java.util.stream.Collectors;
 
 public class Emloyeemain {
     public static void main(String[] args) {
@@ -58,5 +57,16 @@ public class Emloyeemain {
                 .sorted(lastThenFirst)
                 .map(Employee::getName)
                 .forEach(System.out::println);
+
+        System.out.printf("%nEmployees by department:%n");
+        Map<String,List<Employee>> groupedByDepartment =
+                list.stream()
+                .collect(Collectors.groupingBy(Employee::getDepartment));
+        groupedByDepartment.forEach(
+                (department,employeesInDepartment)->{
+                    System.out.println(department);
+                    employeesInDepartment.forEach(employee -> System.out.printf("  %s%n", employee));
+                }
+        );
     }
 }
