@@ -27,5 +27,7 @@ public class ArraySimplifyWithLamdas {
                 .sorted()
                 .collect(Collectors.toList());
         System.out.println(greaterThanfour);
+
+        System.out.println( greaterThanfour.stream().sorted().collect(Collectors.toList()));
     }
 }
