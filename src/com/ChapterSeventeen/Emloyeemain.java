@@ -39,5 +39,24 @@ public class Emloyeemain {
         list.stream()
                 .sorted(lastThenFirst)
                 .forEach(System.out::println);
+
+        System.out.printf(
+                "%nEmployees in descending order by last name then first:%n");
+        list.stream()
+                .sorted( lastThenFirst.reversed() )
+                .forEach(System.out::println);
+
+        System.out.printf("%nUnique employee last names:%n");
+        list.stream()
+                .map(Employee::getLastName)
+                .distinct()
+                .sorted()
+                .forEach(System.out::println);
+
+        System.out.printf("%nEmployee names in order by last name then first name:%n");
+        list.stream()
+                .sorted(lastThenFirst)
+                .map(Employee::getName)
+                .forEach(System.out::println);
     }
 }
