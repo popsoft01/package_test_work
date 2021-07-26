@@ -12,6 +12,7 @@ public class Fanabocci {
     }
 
     public static void main(String[] args) {
-        System.out.println(fanabocci(BigInteger.valueOf(20)));
+        for (int i = 0; i < 50;i++)
+            System.out.println(fanabocci(BigInteger.valueOf(i)));
     }
 }
