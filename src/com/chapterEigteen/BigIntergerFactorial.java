@@ -12,6 +12,6 @@ public class BigIntergerFactorial {
     }
 
     public static void main(String[] args) {
-        System.out.println(factorial(BigInteger.valueOf(5)));
+        System.out.println(factorial(BigInteger.valueOf(1)));
     }
 }
