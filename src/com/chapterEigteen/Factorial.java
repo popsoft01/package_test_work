@@ -2,7 +2,7 @@ package com.chapterEigteen;
 
 public class Factorial {
     public static long factorial(int number){
-        if (number == 0 || number ==1){
+        if (number <=1){
             return 1;
         }else {
             number *= factorial(number-1);
@@ -11,7 +11,8 @@ public class Factorial {
     }
 
     public static void main(String[] args) {
-        System.out.println( factorial(5));
+        for (int i =0; i < 10; i++){
+        System.out.println( factorial(i));}
     }
 
 }
