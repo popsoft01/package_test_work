@@ -13,13 +13,12 @@ public class Stack<T> {
         int newCapacity = newElement > 0 ? newElement :10;
         element = new ArrayList<>(newCapacity);
     }
-    public static void push(T item){
+    public  void push(T item){
         element.add(item);
     }
     public T pop() throws EmptyStackException {
         if (element.isEmpty()) // if stack is empty
             throw new EmptyStackException("Stack is empty, cannot pop");
-// remove and return top element of Stack
         return element.remove(element.size() - 1);
     }
 }
