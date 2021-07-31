@@ -2,7 +2,19 @@ package ChapterTwenty;
 
 public class GenericMain {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws EmptyStackException {
+        GenericMain gen = new GenericMain();
+        double[] doubleElements = {1.1, 2.2, 3.3, 4.4, 5.5};
+        int[] integerElements = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+        Stack stack = new Stack();
+        Stack<Object> stack1 = new Stack<>(5);
+
+
+        gen.pushDouble(stack,doubleElements);
+        double toPop = gen.popDouble(stack);
+        int num = stack.getSize();
+        System.out.println(toPop + " "+ num);
 
     }
 
@@ -25,5 +37,12 @@ public class GenericMain {
     public int popInt(Stack<Integer> stack) throws EmptyStackException {
         return stack.pop();
     }
+
+//    public int getStackSize(Stack<Double> stack){
+//        return stack.getSize();
+//    }
+//    public int getStackSize(Stack<Integer> stack){
+//        return stack.getSize();
+//    }
 
 }
