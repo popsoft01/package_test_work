@@ -8,13 +8,18 @@ public class GenericMain {
         int[] integerElements = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
         Stack stack = new Stack();
-        Stack<Object> stack1 = new Stack<>(5);
+        Stack stack1 = new Stack<>(5);
 
 
         gen.pushDouble(stack,doubleElements);
         double toPop = gen.popDouble(stack);
         int num = stack.getSize();
         System.out.println(toPop + " "+ num);
+
+        gen.pushInt(stack1,integerElements);
+        int topTo = gen.popInt(stack1);
+        int num2 = stack1.getSize();
+        System.out.println(topTo + " "+ num2);
 
     }
 
@@ -28,7 +33,7 @@ public class GenericMain {
         return stack.pop();
     }
 
-    public void pushInt(Stack<Integer> stacks,int[] array){
+    public void pushInt(Stack<Object> stacks, int[] array){
         for (int element: array){
             stacks.push(element);
         }
