@@ -21,4 +21,7 @@ public class Stack<T> {
             throw new EmptyStackException("Stack is empty, cannot pop");
         return element.remove(element.size() - 1);
     }
+    public int getSize(){
+      return element.size();
+    }
 }
