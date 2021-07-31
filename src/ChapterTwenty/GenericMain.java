@@ -9,6 +9,7 @@ public class GenericMain {
 
         Stack stack = new Stack();
         Stack stack1 = new Stack<>(5);
+        Stack stack2 = new Stack<>(4);
 
 
         gen.pushDouble(stack,doubleElements);
@@ -20,6 +21,8 @@ public class GenericMain {
         int topTo = gen.popInt(stack1);
         int num2 = stack1.getSize();
         System.out.println(topTo + " "+ num2);
+
+        int pus = gen.popInt(stack2);
 
     }
 
