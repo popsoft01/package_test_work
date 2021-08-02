@@ -1,5 +1,7 @@
 package com.ChapterEight;
 
+import java.lang.reflect.Array;
+
 public class Course {
     private String courseName;
     private String[] students;
@@ -19,7 +21,13 @@ public class Course {
         numberOfStudents++;
     }
     public void deleteStudent(String student){
-        students[numberOfStudents] = null;
+        students[numberOfStudents] = student;
 
+    }
+    public String[] getStudents(){
+        return students;
+    }
+    public int getNumberOfStudents(){
+        return numberOfStudents;
     }
 }
