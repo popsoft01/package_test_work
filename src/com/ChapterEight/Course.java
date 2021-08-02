@@ -18,4 +18,8 @@ public class Course {
         students[numberOfStudents] = student;
         numberOfStudents++;
     }
+    public void deleteStudent(String student){
+        students[numberOfStudents] = null;
+
+    }
 }
