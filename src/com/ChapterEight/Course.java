@@ -2,7 +2,7 @@ package com.ChapterEight;
 
 public class Course {
     private String courseName;
-    private String[] student;
+    private String[] students;
     private int numberOfStudents;
 
 
@@ -15,6 +15,7 @@ public class Course {
     }
 
     public void addStudent(String student){
-
+        students[numberOfStudents] = student;
+        numberOfStudents++;
     }
 }
