@@ -21,7 +21,12 @@ public class Course {
         numberOfStudents++;
     }
     public void deleteStudent(String student){
-        students[numberOfStudents] = student;
+        for (int i = 0; i<students.length; i++){
+            if (students[i].equals(student))
+                students[i] = null;
+        }
+//        students[numberOfStudents] = null;
+        numberOfStudents--;
 
     }
     public String[] getStudents(){
