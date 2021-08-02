@@ -19,6 +19,22 @@ public class SumingBy {
                     + total);
         }
     }
+    public void fndingMaxRow(int[][] array){
+        int maxRow = 0;
+        int rowIndexSum = 0;
+        for (int i = 0; i < array.length; i++){
+            maxRow += array[0][i];
+        }
+        for (int k = 1; k< array.length; k++){
+            for (int g= 0; g < array[k].length; g++){
+                rowIndexSum += array[k][g];
+
+                if (rowIndexSum > maxRow){
+                    maxRow = rowIndexSum;
+                }
+            }
+        }
+    }
 
     public static void main(String[] args) {
         int[][] array = {{1,3,4,5},{2,3,4,5},{3,4,5,6}};
