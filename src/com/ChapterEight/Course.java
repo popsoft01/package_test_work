@@ -50,7 +50,10 @@ public class Course {
         for (int i = 0; i < course1.getNumberOfStudents(); i++)
             System.out.print(students[i] + ", ");
         System.out.println();
-        course2.deleteStudent("Steve Smith");
+        for (int i = 0; i < course2.getNumberOfStudents(); i++)
+//            course2.deleteStudent("Kim Smith");
+//        System.out.print(students[i] + ", ");
+//        course2.deleteStudent("Steve Smith");
         System.out.print("Number of students in course2: " + course2.getNumberOfStudents());
     }
 
