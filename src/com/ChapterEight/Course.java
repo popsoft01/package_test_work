@@ -4,7 +4,7 @@ import java.lang.reflect.Array;
 
 public class Course {
     private String courseName;
-    private String[] students;
+    private String[] students = new String[100];
     private int numberOfStudents;
 
 
