@@ -8,11 +8,15 @@ public class StackArrayList {
     public void push(int number){
         list.add(number);
     }
+
     public int pop(int number){
       return  list.remove(number);
     }
 
     public int peek(){
         return list.size();
+    }
+    public boolean isEmpty(){
+       return list.isEmpty();
     }
 }
