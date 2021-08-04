@@ -4,6 +4,7 @@ public class Person {
 private String name;
 private String address;
 private String PhoneNumber;
+private String email;
 private enum status{freshman, sophomore, junior,  senior};
 
 
@@ -39,7 +40,13 @@ private enum status{freshman, sophomore, junior,  senior};
         this.email = email;
     }
 
-    private String email;
-
-
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", PhoneNumber='" + PhoneNumber + '\'' +
+                ", email='" + email + '\'' +
+                '}';
+    }
 }
