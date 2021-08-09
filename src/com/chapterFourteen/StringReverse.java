@@ -4,7 +4,7 @@ package com.chapterFourteen;
 public class StringReverse {
     public static void reverseStringToken(String sentence){
         String[] words = sentence.split(" ");
-        StringBuilder stringBuilder = null;
+        StringBuilder stringBuilder;
         for (String word : words){
             stringBuilder = new StringBuilder(word);
             System.out.print(stringBuilder.reverse() + " ");}
