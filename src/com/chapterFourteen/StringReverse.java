@@ -1,7 +1,10 @@
 package com.chapterFourteen;
 
 
-import java.util.Locale;
+import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class StringReverse {
     public static void reverseStringToken(String sentence){
@@ -18,6 +21,37 @@ public class StringReverse {
         System.out.println(input.toUpperCase());
         System.out.println(input.toLowerCase());
     }
+    public static List<Integer> searchChar(String sentence, String character){
+        List<Integer> list = new ArrayList<>();
+        int index = 0;
+        while (index != -1){
+            if (index !=-1){
+            index = sentence.indexOf(character);
+            list.add(index);
+            index++;
+            }
+        }
+        return list;
+
+    }
+
+    public static void generateThreeLetterWord(String input,int number){
+        String[] newr =  new String[input.length()];
+        if (input.length() != 5){
+            throw  new IllegalArgumentException("inappropriate String length");
+        }else{
+            SecureRandom rand = new SecureRandom();
+            String[] newInput = input.split("");
+            for (int i = 0; i<number; i++){
+                newr[i] = newInput[rand.nextInt(newInput.length)];
+                for (int k = 0; k < newr.length; k++){
+
+                }
+            }
+            System.out.println(Arrays.toString(newr));
+        }
+
+    }
 
 //    public static StringBuilder reverseWord(String[] words){
 //
@@ -27,5 +61,8 @@ public class StringReverse {
         String input = "Write an application that inputs a line of text and outputs the text twice—once in all uppercase letters and once in all lowercase letters.";
         reverseStringToken(input);
         upperCaseAndLowerCase(input);
+        generateThreeLetterWord("thiog",5);
+//        System.out.println( searchChar(input,"t"));
+
     }
 }
