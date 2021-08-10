@@ -35,16 +35,24 @@ public class StringReverse {
 
     }
 
-    public static void generateThreeLetterWord(String input,int number){
+    public static void generateThreeLetterWord(String input){
         String[] newr =  new String[input.length()];
+        StringBuilder newString = new StringBuilder();
+        int count = 0;
         if (input.length() != 5){
             throw  new IllegalArgumentException("inappropriate String length");
         }else{
             SecureRandom rand = new SecureRandom();
             String[] newInput = input.split("");
-            for (int i = 0; i<number; i++){
+            for (int i = 0; i<input.length(); i++){
                 newr[i] = newInput[rand.nextInt(newInput.length)];
                 for (int k = 0; k < newr.length; k++){
+                newString.append(newr[i]);
+                count++;
+                    System.out.println(Arrays.toString(newr));
+                if (count == 3){
+                    System.out.println(newString);
+                }
 
                 }
             }
@@ -61,7 +69,7 @@ public class StringReverse {
         String input = "Write an application that inputs a line of text and outputs the text twice—once in all uppercase letters and once in all lowercase letters.";
         reverseStringToken(input);
         upperCaseAndLowerCase(input);
-        generateThreeLetterWord("thiog",5);
+        generateThreeLetterWord("thiog");
 //        System.out.println( searchChar(input,"t"));
 
     }
