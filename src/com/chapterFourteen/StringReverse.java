@@ -47,8 +47,9 @@ public class StringReverse {
             for (int i = 0; i<input.length(); i++){
                 newr[i] = newInput[rand.nextInt(newInput.length)];
                 for (int k = 0; k < newr.length; k++){
-                newString.append(newr[i]);
-                count++;
+                    if (!newr[i].contains(newString)){
+                        newString.append(newr[i]);
+                        count++;}
                     System.out.println(Arrays.toString(newr));
                 if (count == 3){
                     System.out.println(newString);
