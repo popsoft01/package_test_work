@@ -35,42 +35,32 @@ public class StringReverse {
 
     }
 
-    public static void generateThreeLetterWord(String input){
-        String[] newr =  new String[input.length()];
-        StringBuilder newString = new StringBuilder();
+    public static void generateThreeLetterWord(String input) {
+//        String[] newr = new String[input.length()];
+//        String newr ="";
+        StringBuilder newString = new StringBuilder("");
         int count = 0;
-        if (input.length() != 5){
-            throw  new IllegalArgumentException("inappropriate String length");
-        }else{
-            SecureRandom rand = new SecureRandom();
-            String[] newInput = input.split("");
-            for (int i = 0; i<input.length(); i++){
-                newr[i] = newInput[rand.nextInt(newInput.length)];
-                for (int k = 0; k < newr.length; k++){
-                    if (!newr[i].contains(newString)){
-                        newString.append(newr[i]);
-                        count++;}
-                    System.out.println(Arrays.toString(newr));
-                if (count == 3){
-                    System.out.println(newString);
+        if (input.length() != 5) {
+            throw new IllegalArgumentException("inappropriate String length");
+        } else {
+            for (int i =0; i < input.length(); i++){
+                for (int k = 0; k< input.length(); k++){
+                    for(int j =0; j<input.length(); j++){
+                        newString.append(input, i, 1).append(input, k, 1).append(input, j, 1);
+                    }
                 }
 
-                }
             }
-            System.out.println(Arrays.toString(newr));
+
+            System.out.println(newString);
         }
 
     }
-
-//    public static StringBuilder reverseWord(String[] words){
-//
-//    }
-
     public static void main(String[] args) {
         String input = "Write an application that inputs a line of text and outputs the text twice—once in all uppercase letters and once in all lowercase letters.";
         reverseStringToken(input);
         upperCaseAndLowerCase(input);
-        generateThreeLetterWord("thiog");
+        generateThreeLetterWord("thing");
 //        System.out.println( searchChar(input,"t"));
 
     }
