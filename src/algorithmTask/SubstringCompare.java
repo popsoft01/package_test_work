@@ -1,6 +1,7 @@
 package algorithmTask;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
@@ -39,7 +40,9 @@ public class SubstringCompare {
         ArrayList<String> list = new ArrayList<String>();
         for (int i = 0; i < s.length() -k; i++){
             list.add(s.substring(i,i+k));
-            list.sort();
+            Collections.sort(list);
+            smallest = list.get(0);
+            largest = list.get(list.size()-1);
         }
 
         return smallest + "\n" + largest;
@@ -48,7 +51,7 @@ public class SubstringCompare {
     public static void main(String[] args) {
         System.out.println(getSmallestAndLargest("welcometojava",3));
 
-        System.out.println(getSmallAndLargestWithSort("welcometojava",3));
+        System.out.println(getSmallAndLargestWithArrayList("welcometojava",3));
         }
 
 
