@@ -9,7 +9,7 @@ public class IntergerArgurment {
             for (int j = i + 1; j <a.length; j++){
                 if (a[i] + a[j]==b) {
                    c[0]=i;
-                   c[1] = j;
+                   c[1] =j;
                 }
             }
         }
