@@ -35,24 +35,25 @@ public class StringReverse {
 
     }
 
-    public static void generateThreeLetterWord(String input) {
+    public static void generateThreeLetterWord(String input,int number) {
 //        String[] newr = new String[input.length()];
 //        String newr ="";
-        StringBuilder newString = new StringBuilder("");
-        int count = 0;
+        StringBuilder newString = new StringBuilder(" ");
+
         if (input.length() != 5) {
             throw new IllegalArgumentException("inappropriate String length");
         } else {
-            for (int i =0; i < input.length(); i++){
-                for (int k = 0; k< input.length(); k++){
-                    for(int j =0; j<input.length(); j++){
-                        newString.append(input, i, 1).append(input, k, 1).append(input, j, 1);
+            for (int i =0; i < input.length() -number+1; i++){
+                for (int k = i; k< input.length()-number+i; k++){
+                    for(int j = k; j<input.length()-number+k; j++){
+                        if (i != k & i != j & k!=j)
+                            System.out.println(input.substring(i,1) + input.substring(k,1) + input.substring(j,input.length()-j+1) + " ");
                     }
                 }
 
             }
 
-            System.out.println(newString);
+//            System.out.println(newString);
         }
 
     }
@@ -60,7 +61,7 @@ public class StringReverse {
         String input = "Write an application that inputs a line of text and outputs the text twice—once in all uppercase letters and once in all lowercase letters.";
         reverseStringToken(input);
         upperCaseAndLowerCase(input);
-        generateThreeLetterWord("thing");
+        generateThreeLetterWord("thing", 3);
 //        System.out.println( searchChar(input,"t"));
 
     }
