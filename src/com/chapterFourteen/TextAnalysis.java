@@ -19,13 +19,27 @@ public class TextAnalysis {
 
         }
         System.out.printf("%s%n%10s%n",storage.keySet() ,storage.values());
-//    public static  void characterOccurrence(String text){
+//
 
 
     }
+//    public static  void characterOccurrence(String text){
+//        int counter = 0;
+//        String[] splitText = text.split("");
+//        for (int i =0; i<splitText.length;i++){
+//                if (splitText[i].toLowerCase().equals(splitText[i].toLowerCase()))
+//                    counter++;
+//            System.out.printf("%s%7S%n", character, counter);
+//                }
+
+//            }
+
+
+
 
     public static void main(String[] args) {
         getChar("To be, or not to be:");
+//        characterOccurrence("To be, or not to be:");
     }
 
 
