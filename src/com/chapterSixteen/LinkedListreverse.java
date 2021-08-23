@@ -28,4 +28,7 @@ public class LinkedListreverse {
             }
         }
 
+//    public static void main(String[] args) {
+//
+//    }
 }
