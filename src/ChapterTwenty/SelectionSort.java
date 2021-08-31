@@ -1,4 +1,4 @@
-package chapterNinteen;
+package ChapterTwenty;
 
 import java.lang.reflect.Array;
 import java.util.Arrays;
@@ -27,8 +27,11 @@ public class SelectionSort<T> {
 
     public static void main(String[] args) {
         Integer[] array = {4,10,20,5,7};
+        String[] nem = {"boy","girl","dog","love","he"};
+        String[] newNew = sort(nem);
         Integer[] newArray = sort(array);
         System.out.println(Arrays.toString(newArray));
+        System.out.println(Arrays.toString(newNew));
     }
 }
 
