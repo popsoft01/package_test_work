@@ -11,7 +11,7 @@ public class SelectionSort<T> {
 
             for (int i = 0; i < array.length; i++) {
 
-                if (array[j].compareTo(array[i]) > 0) {
+                if (array[j].compareTo(array[i]) < 0) {
                    T temp = array[i];
                    array[i] = array[j];
                    array[j] = temp;
