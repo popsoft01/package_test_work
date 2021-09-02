@@ -6,4 +6,8 @@ public class GenericIsEqualTo <T>{
         return firstArgurment.equals(secondArgurment);
     }
 
+    public static void main(String[] args) {
+        System.out.println(isEqualTo("Olu","Bolu"));
+    }
+
 }
