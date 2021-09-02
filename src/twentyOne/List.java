@@ -62,7 +62,7 @@ public class List<T> {
     }
 
 
-    private boolean isEmpty() {
+    boolean isEmpty() {
         return firstNode == null;
     }
     public void print() throws EmptyListException {
