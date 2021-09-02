@@ -1,9 +1,9 @@
 package twentyOne;
 
 public class QueueTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws EmptyListException {
         QueueComposition<Integer> queue = new QueueComposition<>();
-        try {
+
             queue.enqueue(-1);
             queue.print();
             queue.enqueue(0);
@@ -12,7 +12,7 @@ public class QueueTest {
             queue.print();
             queue.enqueue(5);
             queue.print();
-
+        try{
             int removedItem;
             while (true)
             {
