@@ -34,7 +34,7 @@ public class InsertionSortTest {
     public static void main(String[] args) {
         int[] list = {1, 9, 4, 6, 5, -4};
         System.out.println(Arrays.toString(bubbleSort(list)));
-//        System.out.println(Arrays.toString(insertSort(list)));
+        System.out.println(Arrays.toString(insertSort(list)));
     }
 
 }
