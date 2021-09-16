@@ -4,6 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static com.ChapterSixteen.GdcAlgorithm.gdc;
+import static com.ChapterSixteen.GdcAlgorithm.gdcTwo;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class GdcAlgorithmTest {
@@ -44,6 +45,9 @@ public class GdcAlgorithmTest {
         assertEquals(exception.getMessage(), "Zero is indivisible");
     }
 
-
+    @Test
+    void set(){
+        System.out.println(gdcTwo(12,16));
+    }
 
 }

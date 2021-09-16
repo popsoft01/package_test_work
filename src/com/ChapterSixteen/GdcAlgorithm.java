@@ -15,6 +15,14 @@ public class GdcAlgorithm {
 
         return gdc;
     }
+    public static int gdcTwo(int m,int n){
+        if (n % m ==0){
+            return m;
+        }else {
+            return gdcTwo(n, m%n);
+        }
+    }
+
 
 //    public static void main(String[] args) {
 //        System.out.println();
