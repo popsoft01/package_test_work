@@ -1,7 +1,7 @@
 package algorithmTask;
 interface Hello {
     String sayHello(String greet);
-public class LambdaAlgorithm {
+public class LambdaAlgorithmTest {
 
 
     public static void main(String[] args) {
