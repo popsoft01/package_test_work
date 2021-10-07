@@ -7,18 +7,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Cart {
-    private static BigInteger totalPrice;
+    private static BigInteger totalPrice = BigInteger.ZERO;
     private static List<Item> itemNumber = new ArrayList<>();
     private static Item item;
 
-    public Cart(BigInteger totalPrice, List<Item> itemNumber, Item item) {
+    public Cart(BigInteger totalPrice,  Item item) {
         Cart.totalPrice = totalPrice;
-        Cart.itemNumber = itemNumber;
+//        Cart.itemNumber = itemNumber;
         Cart.item = item;
     }
 
     public static void addItem(Item item){
         itemNumber.add(item);
+        System.out.println(item.getPrice());
     }
     public static void removeItem(Item item){
         itemNumber.remove(item);
@@ -34,12 +35,13 @@ public class Cart {
 
     public static BigInteger getTotalPrice() {
        if (itemNumber.size() == 1){
-           totalPrice = item.getPrice();
+           totalPrice = itemNumber.get(0).getPrice();
        }
        else if (itemNumber.size() > 1){
-           for (int i = 0; i< itemNumber.size(); i++){
-             totalPrice = totalPrice.add(item.getPrice()) ;
-           }
+        for (Item value : itemNumber) {
+            totalPrice = totalPrice.add(value.getPrice());
+
+        }
 
        }
        return totalPrice;
