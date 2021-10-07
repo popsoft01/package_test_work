@@ -3,8 +3,9 @@ package shopping;
 import java.math.BigInteger;
 
 public class Item {
+    private static BigInteger price;
     private String id;
-    private BigInteger price;
+//    private BigInteger price;
     private String description;
 
     public Item() {
@@ -12,7 +13,7 @@ public class Item {
 
     public Item(String id, BigInteger price, String description) {
         this.id = id;
-        this.price = price;
+        Item.price = price;
         this.description = description;
     }
 
@@ -24,7 +25,7 @@ public class Item {
         this.id = id;
     }
 
-    public BigInteger getPrice() {
+    public static BigInteger getPrice() {
         return price;
     }
 
