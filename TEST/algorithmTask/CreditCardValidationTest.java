@@ -21,13 +21,13 @@ class CreditCardValidationTest {
     @Test
     void cardNumberMultiplicationfromBack(){
         int[] stringArray =  {4,0,0,3,6,0,0,0,0,0,0,0,0,0,1,4};
-        int[] newString = {4, 0, 0, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8};
+        int[] newString = {4, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4};
         assertArrayEquals(newString,cardValidation.multiplyCardNumberFromBack(stringArray));
     }
     @Test
     void cardNumberSumation(){
 //        int[] stringArray =  {1,2,3,4,5,6,7,8,9,1};
-        int[] newString = {4, 0, 0, 6, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 8};
+        int[] newString = {4, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4};
         assertEquals(25,cardValidation.sumTheCardNumber(newString));
     }
     @Test

@@ -16,7 +16,7 @@ public class CreditCardValidation {
 
     public int[] multiplyCardNumberFromBack(int[] stringArray) {
         int multiply = 0;
-        for (int j = stringArray.length - 1; j > 0; j = j - 2) {
+        for (int j = stringArray.length - 2; j > 0; j = j - 2) {
             multiply = stringArray[j] * 2;
             if (multiply > 9) {
                 multiply = multiply % 10 + 1;
