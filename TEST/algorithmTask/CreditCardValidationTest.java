@@ -19,7 +19,7 @@ class CreditCardValidationTest {
         assertArrayEquals(stringArray, cardValidation.cardValidation(cardNumber));
     }
     @Test
-    void cardNumberMultiplicationfromBack(){
+    void cardNumberMultiplicationFromBack(){
         int[] stringArray =  {4,0,0,3,6,0,0,0,0,0,0,0,0,0,1,4};
         int[] newString = {4, 0, 0, 3, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 4};
         assertArrayEquals(newString,cardValidation.multiplyCardNumberFromBack(stringArray));
