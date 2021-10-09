@@ -10,7 +10,7 @@ public class Plane {
     public void assignEconomicSeat(Pessenger pessenger,Seat seat){
         for (int i = 0; i < seats.size()/ 2; i++){
             if (!seat.isSeatStatus()){
-                pessenger.setSeatNumber(i);
+                pessenger.setSeatNumber(i + 1);
                 boolean b = seat.isSeatStatus();
             }
         }
