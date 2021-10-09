@@ -5,7 +5,7 @@ import java.util.List;
 
 public class Plane {
     private String planeName;
-    private List<Seat> seats = new ArrayList<>();
+    private  List<Seat> seats = new ArrayList<>();
 
     public void assignEconomicSeat(Pessenger pessenger,Seat seat){
         for (int i = 0; i < seats.size()/ 2; i++){
