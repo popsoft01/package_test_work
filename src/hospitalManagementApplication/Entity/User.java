@@ -14,8 +14,8 @@ public abstract class User {
     public User() {
     }
 
-    public User(int roleId, String username, LocalDate dob, String userAddress, String email) {
-        this.id = UUID.randomUUID().toString();
+    public User(String id, int roleId, String username, LocalDate dob, String userAddress, String email) {
+        setId(id);
         this.roleId = roleId;
         this.username = username;
         this.dob = dob;
