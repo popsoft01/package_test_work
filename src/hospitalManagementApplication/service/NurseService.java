@@ -1,4 +1,8 @@
 package hospitalManagementApplication.service;
 
-public class NurseService {
+import hospitalManagementApplication.Entity.User;
+
+public class NurseService{
+
+
 }
