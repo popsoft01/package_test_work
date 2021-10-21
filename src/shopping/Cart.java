@@ -4,6 +4,7 @@ package shopping;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Cart {
@@ -45,5 +46,9 @@ public class Cart {
 
        }
        return totalPrice;
+    }
+
+    public static void printItem(){
+        System.out.println(Arrays.toString(itemNumber.toArray()));
     }
 }

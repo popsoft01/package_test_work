@@ -41,6 +41,7 @@ class CartTest {
         Cart.addItem(bread);
         Cart.addItem(sandin);
         Cart.addItem(soap);
+        Cart.printItem();
         assertEquals(3,Cart.getTotalItem() );
     }
 
