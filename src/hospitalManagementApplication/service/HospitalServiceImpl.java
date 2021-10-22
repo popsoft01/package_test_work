@@ -1,4 +1,4 @@
 package hospitalManagementApplication.service;
 
-public class PatientService {
+public class HospitalServiceImpl {
 }
