@@ -6,7 +6,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class CollectionsAlgorithm {
-    public static void output(List<Character> listRef){
+    public static void output(List<Character> listRef) {
         for (Character character : listRef) {
             System.out.println(character);
         }
@@ -15,11 +15,12 @@ public class CollectionsAlgorithm {
         System.out.println("Manimum character is:");
         System.out.println(Collections.min(listRef));
     }
-    public static void copy(List<Character> list,List<Character> newList){
-        Collections.copy(newList,list);
+
+    public static void copy(List<Character> list, List<Character> newList) {
+        Collections.copy(newList, list);
     }
 
-    public static void refill(List<Character> list, char put){
+    public static void refill(List<Character> list, char put) {
         Collections.fill(list, put);
         System.out.println("Element new fill is: ");
         output(list);
@@ -32,6 +33,6 @@ public class CollectionsAlgorithm {
 //        List<Character> refList = new LinkedList<>();
 //        copy(refList,list);
 //        output(refList);
-        refill(list,'K');
+        refill(list, 'K');
     }
 }

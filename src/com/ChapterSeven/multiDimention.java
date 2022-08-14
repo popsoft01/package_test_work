@@ -26,14 +26,14 @@ public class multiDimention {
         }
     }
 
-    public static void sevenDislay(){
-        int[][] sevenSegment = {{1,1,1,1},{1,0,0,1},{1,1,1,1},{1,0,0,1},{1,1,1,1}};
-        for (int i = 0; i<sevenSegment.length; i++){
-            for (int j = 0; j <sevenSegment[i].length; j++){
-                if (sevenSegment[i][j] == 1){
+    public static void sevenDislay() {
+        int[][] sevenSegment = {{1, 1, 1, 1}, {1, 0, 0, 1}, {1, 1, 1, 1}, {1, 0, 0, 1}, {1, 1, 1, 1}};
+        for (int i = 0; i < sevenSegment.length; i++) {
+            for (int j = 0; j < sevenSegment[i].length; j++) {
+                if (sevenSegment[i][j] == 1) {
 //                    sevenSegment[i][j] = "#";
                     System.out.print("#" + " ");
-                } else if(sevenSegment[i][j] == 0)
+                } else if (sevenSegment[i][j] == 0)
 //                    sevenSegment[i][j] = " ";
                     System.out.print(" " + " ");
 //                System.out.print(sevenSegment[i][j] + "  ");

@@ -8,7 +8,8 @@ public class BigONotation {
             getTime(100000000);
             getTime(1000000000);
         }
-        public static void getTime (long n) {
+
+        public static void getTime(long n) {
             long startTime = System.currentTimeMillis();
             long k = 0;
             for (int i = 1; i <= n; i++) {

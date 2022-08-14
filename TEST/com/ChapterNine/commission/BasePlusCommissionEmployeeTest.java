@@ -9,14 +9,14 @@ public class BasePlusCommissionEmployeeTest {
     BasePlusCommissionEmployee base;
 
     @BeforeEach
-    void startEachWith(){
-        base = new BasePlusCommissionEmployee("OLu","Bola","123456",300.0,0.04,400);
+    void startEachWith() {
+        base = new BasePlusCommissionEmployee("OLu", "Bola", "123456", 300.0, 0.04, 400);
     }
 
     @Test
-    void cansetBaseSalary(){
+    void cansetBaseSalary() {
         base.setBaseSalary(200.0);
-        assertEquals(200.0,base.getBaseSalary());
+        assertEquals(200.0, base.getBaseSalary());
     }
 //    @Test
 //    void canCalculateEarning(){

@@ -20,11 +20,11 @@ public class GeometricObject {
     }
 
     public String getColour() {
-        return  colour;
+        return colour;
     }
 
     public boolean isFilled() {
-        return  filled;
+        return filled;
     }
 
     public void setFilled(boolean filled) {
@@ -34,7 +34,8 @@ public class GeometricObject {
     public java.util.Date getDateCreated() {
         return dateCreated;
     }
-    public String toString(){
-        return String.format("%s %b %s",colour,filled,dateCreated);
+
+    public String toString() {
+        return String.format("%s %b %s", colour, filled, dateCreated);
     }
 }

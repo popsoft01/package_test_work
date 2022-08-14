@@ -1,6 +1,6 @@
 package com.ChapterTen.shape;
 
-public abstract class TwoDemimentionShape extends Shape{
+public abstract class TwoDemimentionShape extends Shape {
 
 
     private double radius;
@@ -8,11 +8,11 @@ public abstract class TwoDemimentionShape extends Shape{
     public TwoDemimentionShape() {
     }
 
-    public TwoDemimentionShape(double length, double width,double radius) {
+    public TwoDemimentionShape(double length, double width, double radius) {
         super(length, width);
-        if (radius < 0.0){
+        if (radius < 0.0) {
             throw new IllegalArgumentException("Length must be greater 0.0");
-        }else{
+        } else {
             this.radius = radius;
         }
     }

@@ -4,8 +4,9 @@ import org.junit.jupiter.api.BeforeEach;
 
 public class CarTest {
     Car car;
+
     @BeforeEach
-    void startEachWith(){
-        car= new Car();
+    void startEachWith() {
+        car = new Car();
     }
 }

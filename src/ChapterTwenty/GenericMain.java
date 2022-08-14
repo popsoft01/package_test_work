@@ -12,22 +12,22 @@ public class GenericMain {
         Stack stack2 = new Stack<>(4);
 
 
-        gen.pushDouble(stack,doubleElements);
+        gen.pushDouble(stack, doubleElements);
         double toPop = gen.popDouble(stack);
         int num = stack.getSize();
-        System.out.println(toPop + " "+ num);
+        System.out.println(toPop + " " + num);
 
-        gen.pushInt(stack1,integerElements);
+        gen.pushInt(stack1, integerElements);
         int topTo = gen.popInt(stack1);
         int num2 = stack1.getSize();
-        System.out.println(topTo + " "+ num2);
+        System.out.println(topTo + " " + num2);
 
         int pus = gen.popInt(stack2);
 
     }
 
-    public void pushDouble(Stack<Double> stacks,double[] array){
-        for (double element: array){
+    public void pushDouble(Stack<Double> stacks, double[] array) {
+        for (double element : array) {
             stacks.push(element);
         }
     }
@@ -36,8 +36,8 @@ public class GenericMain {
         return stack.pop();
     }
 
-    public void pushInt(Stack<Object> stacks, int[] array){
-        for (int element: array){
+    public void pushInt(Stack<Object> stacks, int[] array) {
+        for (int element : array) {
             stacks.push(element);
         }
     }

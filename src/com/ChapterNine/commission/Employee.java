@@ -8,8 +8,9 @@ public class Employee {
     public Employee(String firstName, String lastName, String socialSecurityNumber) {
         this.firstName = firstName;
         this.lastName = lastName;
-        if (socialSecurityNumber.length() != 6){
-            throw new UnsupportedOperationException("Social number cannot be less than 6");}
+        if (socialSecurityNumber.length() != 6) {
+            throw new UnsupportedOperationException("Social number cannot be less than 6");
+        }
         this.socialSecurityNumber = socialSecurityNumber;
 
     }
@@ -43,10 +44,9 @@ public class Employee {
     }
 
     @Override
-    public String toString(){
-        return String.format("%s %s %s", firstName,lastName,socialSecurityNumber);
+    public String toString() {
+        return String.format("%s %s %s", firstName, lastName, socialSecurityNumber);
     }
-
 
 
 }

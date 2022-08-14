@@ -2,14 +2,14 @@ package com.ChapterTen.Payroll;
 
 import com.ChapterEight.Date;
 
-public abstract class Employee implements Payable{
+public abstract class Employee implements Payable {
 
     private String firstName;
     private String lastName;
     private String socialSecurityNumber;
     private Date birthday;
 
-    public Employee(String firstName, String lastName, String ssn,  Date birthday) {
+    public Employee(String firstName, String lastName, String ssn, Date birthday) {
         this.firstName = firstName;
         this.lastName = lastName;
         socialSecurityNumber = ssn;
@@ -45,7 +45,6 @@ public abstract class Employee implements Payable{
     public Date getBirthday() {
         return birthday;
     }
-
 
 
     @Override

@@ -1,8 +1,8 @@
 package ChapterTwenty;
 
 public class NewGeneric {
-    public static <T> void printArray2(T[] inputArray){
-        for (T element:inputArray)
+    public static <T> void printArray2(T[] inputArray) {
+        for (T element : inputArray)
             System.out.print(element + " ");
         System.out.println();
 

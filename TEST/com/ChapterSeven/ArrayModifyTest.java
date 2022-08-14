@@ -25,7 +25,7 @@ class ArrayModifyTest {
     }
 
     @Test
-    void arraylist(){
+    void arraylist() {
         ArrayList<String> item = new ArrayList<>();
         ArrayModify.arrayWork(item);
     }

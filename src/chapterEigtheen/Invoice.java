@@ -10,7 +10,7 @@ public class Invoice {
 
     public Invoice() {
         partNumber = 0;
-        partDescription ="";
+        partDescription = "";
         quantity = 0;
         price = 0.00;
     }
@@ -54,19 +54,19 @@ public class Invoice {
         return price;
     }
 
-    public double getInvoiceValue(){
+    public double getInvoiceValue() {
         return quantity * Math.round(price * 100.0) / 100.0;
     }
 
-    public static void printHeader(){
+    public static void printHeader() {
 
-        System.out.printf("%-12s %-30s %-10s %-10s%n","Part Number","Part Description","Quantity","Price");
+        System.out.printf("%-12s %-30s %-10s %-10s%n", "Part Number", "Part Description", "Quantity", "Price");
     }
 
 
     public String toString() {
 
-        return String.format("%-12s %-30s %-10s %-10s",getPartNumber(),getPartDescription(),getQuantity(),getPrice() );
+        return String.format("%-12s %-30s %-10s %-10s", getPartNumber(), getPartDescription(), getQuantity(), getPrice());
     }
 
 

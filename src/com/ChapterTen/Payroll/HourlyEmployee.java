@@ -2,7 +2,7 @@ package com.ChapterTen.Payroll;
 
 import com.ChapterEight.Date;
 
-public class HourlyEmployee extends  Employee {
+public class HourlyEmployee extends Employee {
     private double hours;
     private double wage;
 
@@ -43,12 +43,12 @@ public class HourlyEmployee extends  Employee {
     }
 
     @Override
-    public double earning(){
+    public double earning() {
         double earning = 0.0;
         if (hours <= 40) {
             earning = wage * hours;
         } else if (hours > 40) {
-          earning =  (40 * wage + (hours - 40) * wage * 1.5);
+            earning = (40 * wage + (hours - 40) * wage * 1.5);
         }
         return earning;
     }

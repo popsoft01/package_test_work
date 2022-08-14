@@ -11,51 +11,55 @@ public class List<T> {
     }
 
     public List(String listName) {
-       name = listName;
+        name = listName;
         firstNode = lastNode = null;
     }
-    public void insertAtFront(T insertItem){
-        if (isEmpty()){
-            firstNode=lastNode= new ListNode<>(insertItem);
-        } else{
-            firstNode = new ListNode<>(insertItem, firstNode);
-            }
-            
-        }
-    public void insertAtBack(T insertItem){
-        if (isEmpty()){
+
+    public void insertAtFront(T insertItem) {
+        if (isEmpty()) {
             firstNode = lastNode = new ListNode<>(insertItem);
-        }else {
+        } else {
+            firstNode = new ListNode<>(insertItem, firstNode);
+        }
+
+    }
+
+    public void insertAtBack(T insertItem) {
+        if (isEmpty()) {
+            firstNode = lastNode = new ListNode<>(insertItem);
+        } else {
             lastNode = lastNode.nextNode = new ListNode<>(insertItem);
         }
     }
-    public T removeFromFront() throws EmptyListException{
-        if (isEmpty()){
+
+    public T removeFromFront() throws EmptyListException {
+        if (isEmpty()) {
             throw new EmptyListException(name);
         }
         T removeItem = firstNode.getData();
-        if (firstNode == lastNode){
+        if (firstNode == lastNode) {
             firstNode = lastNode = null;
-        }else{
-           firstNode= firstNode.nextNode;
+        } else {
+            firstNode = firstNode.nextNode;
         }
 
         return removeItem;
     }
-    public T removeFromBack() throws EmptyListException{
-        if (isEmpty()){
+
+    public T removeFromBack() throws EmptyListException {
+        if (isEmpty()) {
             throw new EmptyListException(name);
         }
         T removeItem = firstNode.getData();
-        if (firstNode == lastNode){
+        if (firstNode == lastNode) {
             firstNode = lastNode = null;
-        }else{
-           ListNode<T> current = firstNode;
-           while (current.getNextNode() != lastNode){
-               current.nextNode = null;
-           }
-           lastNode = current;
-           current.nextNode = null;
+        } else {
+            ListNode<T> current = firstNode;
+            while (current.getNextNode() != lastNode) {
+                current.nextNode = null;
+            }
+            lastNode = current;
+            current.nextNode = null;
         }
 
         return removeItem;
@@ -65,15 +69,16 @@ public class List<T> {
     boolean isEmpty() {
         return firstNode == null;
     }
+
     public void print() throws EmptyListException {
-        if (isEmpty()){
+        if (isEmpty()) {
             System.out.printf("Empty %s%n", name);
             return;
         }
         System.out.printf("This %s is: ", name);
         ListNode<T> current = firstNode;
 
-        while(current != null){
+        while (current != null) {
             System.out.printf("%s ", current.getData());
             current = current.nextNode;
         }

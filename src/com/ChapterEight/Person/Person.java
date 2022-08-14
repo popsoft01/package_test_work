@@ -1,11 +1,14 @@
 package com.ChapterEight.Person;
 
 public class Person {
-private String name;
-private String address;
-private String PhoneNumber;
-private String email;
-private enum status{freshman, sophomore, junior,  senior};
+    private String name;
+    private String address;
+    private String PhoneNumber;
+    private String email;
+
+    private enum status {freshman, sophomore, junior, senior}
+
+    ;
 
 
     public String getName() {

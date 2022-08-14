@@ -1,6 +1,6 @@
 package twentyOne;
 
-public class EmptyListException extends Throwable{
+public class EmptyListException extends Throwable {
     public EmptyListException() {
     }
 

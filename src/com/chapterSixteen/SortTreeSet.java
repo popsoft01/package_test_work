@@ -8,7 +8,7 @@ public class SortTreeSet {
         String[] newString = input.split(" ");
         TreeSet<String> sets = new TreeSet<>(Arrays.asList(newString));
 //        for (int i = 0; i < sets.size(); i++) {
-            System.out.println(sets);
+        System.out.println(sets);
 //        }
     }
 

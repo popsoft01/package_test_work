@@ -9,32 +9,38 @@ public class TelephoneTest {
     Telephone telephone;
 
     @BeforeEach
-    void startEach_with(){
+    void startEach_with() {
         telephone = new Telephone("+234 3857-9886");
     }
+
     @Test
-    void can_setPhoneNumber(){
+    void can_setPhoneNumber() {
         telephone.setPhoneNumber("+234 3857-9886");
-        assertEquals("+234 3857-9886",telephone.getPhonenumber());
+        assertEquals("+234 3857-9886", telephone.getPhonenumber());
     }
+
     @Test
-    void canCansplitToToken(){
-        assertEquals("+234",telephone.tokenSplit());
+    void canCansplitToToken() {
+        assertEquals("+234", telephone.tokenSplit());
     }
+
     @Test
-    void canCansplitTheToToken(){
-        assertEquals("3857-9886",telephone.tokenLastSplit());
+    void canCansplitTheToToken() {
+        assertEquals("3857-9886", telephone.tokenLastSplit());
     }
+
     @Test
-    void canGetLastfourElement(){
-        assertEquals("9886",telephone.tokenLastFourSplit());
+    void canGetLastfourElement() {
+        assertEquals("9886", telephone.tokenLastFourSplit());
     }
+
     @Test
-    void canConcateFirstndexAndLast(){
-        assertEquals("+2349886",telephone.tokenConcat());
+    void canConcateFirstndexAndLast() {
+        assertEquals("+2349886", telephone.tokenConcat());
     }
+
     @Test
-    void start(){
+    void start() {
         System.out.println(telephone);
     }
 

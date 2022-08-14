@@ -1,12 +1,12 @@
 package com.ChapterEight;
 
 public enum EnumClass {
-    LLP("LOve Life People",2015),
+    LLP("LOve Life People", 2015),
     PPT("People property tech", 2019);
 
 
-        private String title;
-        private int year;
+    private String title;
+    private int year;
 
     EnumClass(String title, int year) {
         this.title = title;

@@ -3,7 +3,7 @@ package com.ChapterEight.Person;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Employee extends Person{
+public class Employee extends Person {
     private String officeName;
     private BigDecimal salary;
     private Date date;

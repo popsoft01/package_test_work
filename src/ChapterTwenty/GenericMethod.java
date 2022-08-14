@@ -9,18 +9,21 @@ public class GenericMethod {
         printArray(doubleArray);
         printArray(characterArray);
     }
-    public static void printArray(Integer[] inputArray){
-        for (Integer element: inputArray)
+
+    public static void printArray(Integer[] inputArray) {
+        for (Integer element : inputArray)
             System.out.print(element + " ");
         System.out.println();
     }
-    public static void printArray(Double[] inputArray){
-        for (Double element:inputArray)
+
+    public static void printArray(Double[] inputArray) {
+        for (Double element : inputArray)
             System.out.print(element + " ");
         System.out.println();
     }
-    public static void printArray(Character[] inputArray){
-        for (Character element:inputArray)
+
+    public static void printArray(Character[] inputArray) {
+        for (Character element : inputArray)
             System.out.print(element + " ");
         System.out.println();
     }

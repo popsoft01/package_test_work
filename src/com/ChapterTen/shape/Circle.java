@@ -1,6 +1,6 @@
 package com.ChapterTen.shape;
 
-public class Circle  extends TwoDemimentionShape{
+public class Circle extends TwoDemimentionShape {
     public Circle() {
     }
 
@@ -10,6 +10,6 @@ public class Circle  extends TwoDemimentionShape{
 
     @Override
     public double getArea() {
-        return Math.PI * Math.pow(getRadius(),2);
+        return Math.PI * Math.pow(getRadius(), 2);
     }
 }

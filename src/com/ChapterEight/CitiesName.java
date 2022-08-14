@@ -15,7 +15,7 @@ public class CitiesName {
         collection.add("Dist");
 
         Iterator<String> iterator = collection.iterator();
-        while(iterator.hasNext()){
+        while (iterator.hasNext()) {
             System.out.print(iterator.next().toUpperCase(Locale.ROOT) + " ");
         }
 

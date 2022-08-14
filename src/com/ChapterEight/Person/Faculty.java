@@ -1,6 +1,6 @@
 package com.ChapterEight.Person;
 
-public class Faculty extends Employee{
+public class Faculty extends Employee {
     private String title;
     private String rank;
 

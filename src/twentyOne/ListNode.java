@@ -5,10 +5,10 @@ public class ListNode<T> {
     ListNode<T> nextNode;
 
     public ListNode(T data) {
-        this(data,null);
+        this(data, null);
     }
 
-    public  ListNode(T object, ListNode<T> nextNode) {
+    public ListNode(T object, ListNode<T> nextNode) {
         data = object;
         this.nextNode = nextNode;
     }

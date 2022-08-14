@@ -12,42 +12,44 @@ public class GdcAlgorithmTest {
     GdcAlgorithm gdcAlgorithm;
 
     @BeforeEach
-    void setUp(){
+    void setUp() {
         gdcAlgorithm = new GdcAlgorithm();
     }
 
     @Test
-    void GdcAlgorithm_is_Not_null(){
+    void GdcAlgorithm_is_Not_null() {
         assertNotNull(gdcAlgorithm);
     }
+
     @Test
-    void  gdcCanbecalculated(){
-        int numReturn = gdc(8,12);
+    void gdcCanbecalculated() {
+        int numReturn = gdc(8, 12);
         assertEquals(4, numReturn);
     }
 
     @Test
-    void firstNumberGreaterThanSecondNumber(){
-        int numReturn = gdc(16,12);
+    void firstNumberGreaterThanSecondNumber() {
+        int numReturn = gdc(16, 12);
         assertEquals(4, numReturn);
     }
+
     @Test
-    void checkForZeroInFirstNumber(){
+    void checkForZeroInFirstNumber() {
 //        int numReturn = GdcAlgorithm.gdc(0,12);
-        Exception exception = assertThrows(IllegalArgumentException.class, ()->gdc(0,12),"Zero is indivisible");
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> gdc(0, 12), "Zero is indivisible");
         assertEquals(exception.getMessage(), "Zero is indivisible");
     }
 
     @Test
-    void checkForZeroInSecondNumber(){
+    void checkForZeroInSecondNumber() {
 //        int numReturn = GdcAlgorithm.gdc(0,12);
-        Exception exception = assertThrows(IllegalArgumentException.class, ()-> gdc(12,0),"Zero is indivisible");
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> gdc(12, 0), "Zero is indivisible");
         assertEquals(exception.getMessage(), "Zero is indivisible");
     }
 
     @Test
-    void set(){
-        System.out.println(gdcTwo(12,16));
+    void set() {
+        System.out.println(gdcTwo(12, 16));
     }
 
 }

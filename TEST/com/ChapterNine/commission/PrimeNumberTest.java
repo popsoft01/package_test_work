@@ -10,15 +10,17 @@ public class PrimeNumberTest {
     PrimeNumber primeNumber;
 
     @BeforeEach
-    void setUp(){
-        primeNumber = new  PrimeNumber();
+    void setUp() {
+        primeNumber = new PrimeNumber();
     }
+
     @Test
-    void setPrimeNumberNotNull(){
+    void setPrimeNumberNotNull() {
         assertNotNull(primeNumber);
     }
+
     @Test
-    void canCheckForPrimeNumber(){
+    void canCheckForPrimeNumber() {
 //        assertEquals();
     }
 }

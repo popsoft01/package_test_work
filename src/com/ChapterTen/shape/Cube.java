@@ -1,6 +1,6 @@
 package com.ChapterTen.shape;
 
-public class Cube extends ThreeDymationShape{
+public class Cube extends ThreeDymationShape {
 
     public Cube() {
     }
@@ -12,18 +12,18 @@ public class Cube extends ThreeDymationShape{
 
     @Override
     public String toString() {
-        return "Cube" + "{" + "Edge :" +getLength() + " Volume " + getVolume() + " Area " + getArea()  + " }";
+        return "Cube" + "{" + "Edge :" + getLength() + " Volume " + getVolume() + " Area " + getArea() + " }";
     }
 
     @Override
     public double getArea() {
         double edge = getLength();
-        return 6 * Math.pow(edge,2);
+        return 6 * Math.pow(edge, 2);
     }
 
     @Override
     public double getVolume() {
         double edge = getLength();
-        return Math.pow(edge,3);
+        return Math.pow(edge, 3);
     }
 }

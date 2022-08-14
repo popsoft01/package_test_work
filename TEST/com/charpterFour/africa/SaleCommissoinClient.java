@@ -18,32 +18,36 @@ public class SaleCommissoinClient {
     }
 
     @AfterEach
-    void tearDown(){
+    void tearDown() {
         assertNull(sc);
     }
 
     @Test
-    void salecommissionCanBeCalculatedCommissionPercentage(){
-        assertEquals(0.09, sc.calculatePercentage(100,9));
+    void salecommissionCanBeCalculatedCommissionPercentage() {
+        assertEquals(0.09, sc.calculatePercentage(100, 9));
 
     }
+
     @Test
-    void saleCanCalculateSaleCommission(){
-        assertEquals(20*sc.calculatePercentage(100,9), sc.commissionCalculator(20));
+    void saleCanCalculateSaleCommission() {
+        assertEquals(20 * sc.calculatePercentage(100, 9), sc.commissionCalculator(20));
 //        System.out.println(20*0.09);
     }
+
     @Test
     void cancalateRealRevenue() {
 //        sc.calculatePercentage(20,9);
-        assertEquals(20 - (20 * 0.09),sc.calculateRealRevenue(20));
+        assertEquals(20 - (20 * 0.09), sc.calculateRealRevenue(20));
     }
+
     @Test
-    void canCanlateTotalEarning(){
-        assertEquals(20 + (20*0.09),sc.CalculatePriceWithCommission(20));
+    void canCanlateTotalEarning() {
+        assertEquals(20 + (20 * 0.09), sc.CalculatePriceWithCommission(20));
     }
+
     @Test
-    void CancalculateTotalpriceofproductSale(){
-        assertEquals(50,sc.sumOfProductprice(10,5));
+    void CancalculateTotalpriceofproductSale() {
+        assertEquals(50, sc.sumOfProductprice(10, 5));
 
     }
 

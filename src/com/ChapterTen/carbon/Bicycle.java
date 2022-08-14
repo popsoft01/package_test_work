@@ -1,6 +1,6 @@
 package com.ChapterTen.carbon;
 
-public class Bicycle implements CarbonFootprint{
+public class Bicycle implements CarbonFootprint {
     private double speed;
     private double gear;
 

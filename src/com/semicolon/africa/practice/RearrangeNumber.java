@@ -6,9 +6,9 @@ public class RearrangeNumber {
         StringBuilder buffer = new StringBuilder("68573565");
 
         buffer.reverse();
-        buffer.insert(0,"(+234) ");
-        buffer.setCharAt(8,'-');
-        buffer.setCharAt(11,'-');
+        buffer.insert(0, "(+234) ");
+        buffer.setCharAt(8, '-');
+        buffer.setCharAt(11, '-');
 
         System.out.println(buffer);
 

@@ -10,10 +10,11 @@ public class CircleTest {
 
     @BeforeEach
     void setUp() {
-        circle = new Circle(2,4,3);
+        circle = new Circle(2, 4, 3);
     }
+
     @Test
-    void canCalculateArea(){
-        assertEquals(28.274333882308138,circle.getArea());
+    void canCalculateArea() {
+        assertEquals(28.274333882308138, circle.getArea());
     }
 }

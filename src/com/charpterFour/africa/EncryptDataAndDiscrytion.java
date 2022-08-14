@@ -3,13 +3,13 @@ package com.charpterFour.africa;
 import java.util.Scanner;
 
 public class EncryptDataAndDiscrytion {
-    public void encryption(String message){
+    public void encryption(String message) {
         int key = 5;
         char[] letter = message.toCharArray();
-        for (int i : letter){
+        for (int i : letter) {
             i += key;
 
-            System.out.print (i);
+            System.out.print(i);
         }
         System.out.println(" ");
         System.out.println(message);

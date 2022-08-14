@@ -1,6 +1,7 @@
 package duck;
 
 public interface Duck {
-    void  swim();
+    void swim();
+
     void display();
 }

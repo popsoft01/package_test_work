@@ -9,16 +9,17 @@ public class AirLine {
         if (FIRST_CLASS_SEAT > 0) {
             checkSeat();
             FIRST_CLASS_SEAT--;
-                }
-            }
+        }
+    }
 
 
     public void assignEconomicClass() {
         if (ECONOMIC_CLASS_SEAT > 0) {
             int i = FIRST_CLASS_SEAT;
-            for (;i < ECONOMIC_CLASS_SEAT; i++){
-            ECONOMIC_CLASS_SEAT--;
-        }}
+            for (; i < ECONOMIC_CLASS_SEAT; i++) {
+                ECONOMIC_CLASS_SEAT--;
+            }
+        }
     }
 
     public boolean checkSeat() {
@@ -30,6 +31,7 @@ public class AirLine {
         }
         return seatStatus[i];
     }
+
     public void displayGreet() {
         String greeting = """
                 welcome POP Airline
@@ -38,14 +40,16 @@ public class AirLine {
                 """;
         System.out.println(greeting);
     }
-    public void customerChoice(int seatChoice){
-        if (seatChoice == 1){
+
+    public void customerChoice(int seatChoice) {
+        if (seatChoice == 1) {
             assignFirstClass();
-        }else if(seatChoice == 2){
+        } else if (seatChoice == 2) {
             assignEconomicClass();
         }
     }
-    public void recommedationMessage(){
+
+    public void recommedationMessage() {
         String message = """
                 "Economic class is full,\\n  will you like First class seat"
                 Enter 1 to proceed with first Class
@@ -53,7 +57,8 @@ public class AirLine {
                 """;
         System.out.println(message);
     }
-    public void exitPattern(){
+
+    public void exitPattern() {
         String exitMessage = """
                 Sorry!!! for the inconvinecy
                 Next flight leaves in 3 hours.
@@ -61,10 +66,11 @@ public class AirLine {
         System.out.println(exitMessage);
 
     }
-    public void makeRecommadetion(){
-        if (ECONOMIC_CLASS_SEAT == 0){
+
+    public void makeRecommadetion() {
+        if (ECONOMIC_CLASS_SEAT == 0) {
             recommedationMessage();
-        } else if(ECONOMIC_CLASS_SEAT == 0 && FIRST_CLASS_SEAT == 0){
+        } else if (ECONOMIC_CLASS_SEAT == 0 && FIRST_CLASS_SEAT == 0) {
             exitPattern();
         }
     }

@@ -21,20 +21,20 @@ public class CardDeck {
     }
 
     public void push(CardGame card) {
-        if (isFull ()) throw new StackOverFlowException( "Card deck is full" );
+        if (isFull()) throw new StackOverFlowException("Card deck is full");
         lastPushedLocation++;
         cards[lastPushedLocation] = card;
 
     }
 
     public CardGame peek() {
-        if (isEmpty ()) throw new StackUnderFlow( "Card deck is empty" );
+        if (isEmpty()) throw new StackUnderFlow("Card deck is empty");
         return cards[lastPushedLocation];
     }
 
 
     public CardGame pop() {
-        if (isEmpty ()) throw new StackUnderFlow ( "Card deck is empty" );
+        if (isEmpty()) throw new StackUnderFlow("Card deck is empty");
 
         return cards[lastPushedLocation--];
     }
@@ -45,43 +45,44 @@ public class CardDeck {
 
     public boolean isFull() {
 
-        return (lastPushedLocation == getSize ()-1);
+        return (lastPushedLocation == getSize() - 1);
     }
 
     public void shuffle() {
         SecureRandom rand = new SecureRandom();
-        CardGame temp ;
-        for (int i = cards.length-1 ; i > 0; i--){
+        CardGame temp;
+        for (int i = cards.length - 1; i > 0; i--) {
 
-            int randomIndex = rand.nextInt(cards.length-1);
+            int randomIndex = rand.nextInt(cards.length - 1);
             temp = cards[randomIndex];
             cards[randomIndex] = cards[i];
             cards[i] = temp;
+        }
     }
-}
-    public static CardDeck canCreateFUllCardDeck(){
+
+    public static CardDeck canCreateFUllCardDeck() {
         CardDeck cardDeck = new CardDeck(54);
-        for (Suit suit: Suit.values()) {
-            switch(suit){
+        for (Suit suit : Suit.values()) {
+            switch (suit) {
                 case STAR -> {
-                    for (int i = 0; i<14; i++){
-                        if (i == 6 || i ==9){
+                    for (int i = 0; i < 14; i++) {
+                        if (i == 6 || i == 9) {
                             continue;
                         }
                         cardDeck.push(CardGame.canCreateStarCard(i));
                     }
                 }
                 case TRIANGLE -> {
-                    for (int i = 0; i<14; i++){
-                        if (i == 6 || i ==9){
+                    for (int i = 0; i < 14; i++) {
+                        if (i == 6 || i == 9) {
                             continue;
                         }
                         cardDeck.push(CardGame.canCreateTriangleCard(i));
                     }
                 }
                 case CIRCLE -> {
-                    for (int i = 0; i<14; i++){
-                        if (i == 6 || i ==9){
+                    for (int i = 0; i < 14; i++) {
+                        if (i == 6 || i == 9) {
                             continue;
                         }
                         cardDeck.push(CardGame.canCreateCircleCard(i));
@@ -90,5 +91,6 @@ public class CardDeck {
             }
 
         }
-    return cardDeck;}
+        return cardDeck;
+    }
 }

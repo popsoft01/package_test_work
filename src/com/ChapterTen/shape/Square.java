@@ -1,6 +1,6 @@
 package com.ChapterTen.shape;
 
-public class Square extends TwoDemimentionShape{
+public class Square extends TwoDemimentionShape {
     public Square() {
     }
 
@@ -10,6 +10,6 @@ public class Square extends TwoDemimentionShape{
 
     @Override
     public double getArea() {
-        return Math.pow(getLength(),2);
+        return Math.pow(getLength(), 2);
     }
 }

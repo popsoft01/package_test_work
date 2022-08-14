@@ -10,9 +10,9 @@ public class Palindrome {
         System.out.println(word);
         StringBuilder sb = new StringBuilder(word);
         StringBuilder rev = sb.reverse();
-        if (word.equals(String.valueOf(rev))){
+        if (word.equals(String.valueOf(rev))) {
             System.out.println("it is palindrome");
-        }else{
+        } else {
             System.out.println("Not a palindrome");
         }
 

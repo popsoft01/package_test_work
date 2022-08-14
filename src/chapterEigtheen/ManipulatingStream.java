@@ -12,8 +12,8 @@ public class ManipulatingStream {
 
         List<Invoice> invoices = new ArrayList<>();
 
-        invoices.add(new Invoice(83, "Electric sander", 7,57.98));
-        invoices.add(new Invoice(24, "Power Saw", 18,99.99));
+        invoices.add(new Invoice(83, "Electric sander", 7, 57.98));
+        invoices.add(new Invoice(24, "Power Saw", 18, 99.99));
         invoices.add(new Invoice(7, "Sledge Hammer", 11, 21.50));
         invoices.add(new Invoice(77, "Hammer  ", 76, 11.99));
         invoices.add(new Invoice(39, "Lawn mower", 3, 79.50));
@@ -55,11 +55,11 @@ public class ManipulatingStream {
         //Map each Invoice to its PartDescription and Quantity and then sorts the
         //results by Quantity then display the results
         System.out.println("\nMapping invoice to part Description and quantity then sorting results by quantity: \n" +
-                String.format("%-30s %-8s","Part Description","Quantity"));
+                String.format("%-30s %-8s", "Part Description", "Quantity"));
         invoices
                 .stream()
                 .sorted(quantityComparator)
-                .map(invoice ->String.format("%-30s %-8s", invoice.getPartDescription() , invoice.getQuantity()))
+                .map(invoice -> String.format("%-30s %-8s", invoice.getPartDescription(), invoice.getQuantity()))
                 .forEach(System.out::println);
 
         //comparator that compares values
@@ -68,11 +68,11 @@ public class ManipulatingStream {
         // map each Invoice to its PartDescription and the value of the
         //Invoice ( Quantity * Price ). Order the results by Invoice value.
         System.out.println("\nMapping each invoice to part description and value, the sorting by total value: \n" +
-                String.format("%-30s %-8s","Part Description","Invoice Value"));
+                String.format("%-30s %-8s", "Part Description", "Invoice Value"));
         invoices
                 .stream()
                 .sorted(totalValueComparator)
-                .map(invoice ->String.format("%-30s %-8s", invoice.getPartDescription() , invoice.getInvoiceValue()))
+                .map(invoice -> String.format("%-30s %-8s", invoice.getPartDescription(), invoice.getInvoiceValue()))
 //                .map(invoice ->String.format("%-8d",invoice.getQuantity()*invoice.getPrice()))
                 .forEach(System.out::println);
 
@@ -81,12 +81,12 @@ public class ManipulatingStream {
 
         //Printing invoices whose total value is between $200 and $500
         System.out.println("\nSelecting only invoices between $200 to $500 ordered by invoice value: \n" +
-                String.format("%-30s %-8s","Part Description","Invoice Value"));
+                String.format("%-30s %-8s", "Part Description", "Invoice Value"));
         invoices
                 .stream()
                 .filter(range)
                 .sorted(totalValueComparator)
-                .map(invoice ->String.format("%-30s %-8s", invoice.getPartDescription() , invoice.getInvoiceValue()))
+                .map(invoice -> String.format("%-30s %-8s", invoice.getPartDescription(), invoice.getInvoiceValue()))
                 .forEach(System.out::println);
 
     }

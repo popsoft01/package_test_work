@@ -1,6 +1,6 @@
 package com.ChapterTen.shape;
 
-public class Tetrahedom extends ThreeDymationShape{
+public class Tetrahedom extends ThreeDymationShape {
     public Tetrahedom() {
     }
 
@@ -11,12 +11,12 @@ public class Tetrahedom extends ThreeDymationShape{
     @Override
     public double getArea() {
         double edge = getLength();
-        return Math.sqrt(3 * Math.pow(edge,2));
+        return Math.sqrt(3 * Math.pow(edge, 2));
     }
 
     @Override
     public double getVolume() {
         double edge = getLength();
-        return edge/(6 * Math.sqrt(2));
+        return edge / (6 * Math.sqrt(2));
     }
 }

@@ -16,13 +16,14 @@ class ComparingStringTest {
 
     @Test
     void can_compareString() {
-       int word = ComparingString.compareString("love", "bad");
+        int word = ComparingString.compareString("love", "bad");
 
-     assertEquals(10,word);
+        assertEquals(10, word);
     }
+
     @Test
-    void can_compareStringUsingRegionMatchAndIgnorcase(){
+    void can_compareStringUsingRegionMatchAndIgnorcase() {
         boolean word = ComparingString.regoinMatchCompare("Welcome", "WelCome");
-        assertEquals(2,word);
+        assertEquals(2, word);
     }
 }

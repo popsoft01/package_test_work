@@ -12,9 +12,8 @@ public class ChangingPeriotyQueue {
         queue.offer(5.4);
         System.out.print("Polling from queue: ");
 
-        while ( queue.size() > 0)
-        {
-            System.out.printf("%.1f ", queue.peek() ); // view top element
+        while (queue.size() > 0) {
+            System.out.printf("%.1f ", queue.peek()); // view top element
             queue.poll();
         }
     }

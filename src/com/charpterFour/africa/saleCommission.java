@@ -6,7 +6,7 @@ public class saleCommission {
 
     public double calculatePercentage(int percentangeCommission, int sale_price) {
         this.total_price = sale_price;
-        return percentage = sale_price/(percentangeCommission * 1.0);
+        return percentage = sale_price / (percentangeCommission * 1.0);
     }
 
     public double commissionCalculator(int salary) {
@@ -15,7 +15,7 @@ public class saleCommission {
 
     public double calculateRealRevenue(int sale_price) {
 //        this.percentage = percentage;
-        return sale_price -(sale_price * percentage);
+        return sale_price - (sale_price * percentage);
     }
 
     public double CalculatePriceWithCommission(int base_price) {
@@ -24,8 +24,8 @@ public class saleCommission {
 
     public double sumOfProductprice(double price, double numberOfProductSale) {
 
-       double total_price = 0;
-        while (price <= numberOfProductSale){
+        double total_price = 0;
+        while (price <= numberOfProductSale) {
             total_price += price;
             numberOfProductSale++;
         }

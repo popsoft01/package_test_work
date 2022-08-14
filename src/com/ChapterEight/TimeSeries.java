@@ -1,7 +1,7 @@
 package com.ChapterEight;
 
 public class TimeSeries {
-    private int  hour;
+    private int hour;
     private int minute;
     private int seconds;
 
@@ -21,22 +21,23 @@ public class TimeSeries {
     }
 
     public void setMinute(int minute) throws illegalArgurmentExcption {
-        if (minute < 0 || minute >60){
+        if (minute < 0 || minute > 60) {
             throw new illegalArgurmentExcption("minute out of range");
         }
     }
 
-    public void setHour(int hour)throws illegalArgurmentExcption {
-        if(hour <0 || hour>24){
+    public void setHour(int hour) throws illegalArgurmentExcption {
+        if (hour < 0 || hour > 24) {
             throw new illegalArgurmentExcption("hour out of range");
         }
     }
 
-    public  String toUniversalString(){
-        return String.format("%02d:%02d:%02d",hour,minute,seconds);
+    public String toUniversalString() {
+        return String.format("%02d:%02d:%02d", hour, minute, seconds);
     }
-    public String toString(){
-        return String.format("%d:%02d:02d %s", (hour ==0 || hour==12) ? 12:hour%12,minute,seconds,(hour<12)? "AM":"PM");
+
+    public String toString() {
+        return String.format("%d:%02d:02d %s", (hour == 0 || hour == 12) ? 12 : hour % 12, minute, seconds, (hour < 12) ? "AM" : "PM");
     }
 
     public static void main(String[] args) {

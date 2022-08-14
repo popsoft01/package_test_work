@@ -13,7 +13,7 @@ public class RegexMatches {
                 "Joe's Birthday is 12-17-77";
 
         Matcher matcher = pattern.matcher(string1);
-        while (matcher.find()){
+        while (matcher.find()) {
             System.out.println(matcher.group());
         }
     }

@@ -7,18 +7,21 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CarbonBicycleTest {
     Bicycle bicycle;
+
     @BeforeEach
-    void startEachWith(){
-        bicycle = new Bicycle(12,10);
+    void startEachWith() {
+        bicycle = new Bicycle(12, 10);
     }
+
     @Test
-    void can_setSpeed(){
+    void can_setSpeed() {
         bicycle.setSpeed(12);
         assertEquals(12, bicycle.getSpeed());
     }
+
     @Test
-    void canSetGear(){
+    void canSetGear() {
         bicycle.setGear(10);
-        assertEquals(10,bicycle.getGear());
+        assertEquals(10, bicycle.getGear());
     }
 }

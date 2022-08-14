@@ -7,7 +7,7 @@ import java.util.List;
 
 public class SortClass {
     public static void main(String[] args) {
-        String[] suit ={"Spade", "Diamond","Clubs","Hearts"};
+        String[] suit = {"Spade", "Diamond", "Clubs", "Hearts"};
         List<String> list = Arrays.asList(suit);
         System.out.printf("Unsorted array elements: %s%n", list);
 //        Iterator<String> newList = list.iterator();

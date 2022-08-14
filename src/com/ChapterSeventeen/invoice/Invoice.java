@@ -10,7 +10,8 @@ public class Invoice {
     }
 
     public Invoice(int partNumber) {
-        setPartNumber(partNumber);;
+        setPartNumber(partNumber);
+        ;
     }
 
     public Invoice(int partNumber, double pricePerItem) {
@@ -19,15 +20,15 @@ public class Invoice {
     }
 
     public Invoice(int partNumber, int quantityPurchase, double pricePerItem) {
-        this(partNumber,quantityPurchase);
+        this(partNumber, quantityPurchase);
         setPricePerItem(pricePerItem);
 
 //        this.pricePerItem = pricePerItem;
     }
 
 
-    public Invoice(int partNumber, int quantityPurchase,double pricePerItem, String partDescription) {
-        this(partNumber,quantityPurchase,pricePerItem);
+    public Invoice(int partNumber, int quantityPurchase, double pricePerItem, String partDescription) {
+        this(partNumber, quantityPurchase, pricePerItem);
         setPartDescription(partDescription);
     }
 

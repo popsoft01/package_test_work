@@ -15,24 +15,28 @@ public class CardGame {
         this.suit = suit;
     }
 
-    public static CardGame canCreateTriangleCard(int value){
-        return new CardGame(Suit.TRIANGLE,2);
+    public static CardGame canCreateTriangleCard(int value) {
+        return new CardGame(Suit.TRIANGLE, 2);
     }
 
-    public static CardGame canCreateCircleCard(int value){
-        return new CardGame(Suit.CIRCLE,2);
+    public static CardGame canCreateCircleCard(int value) {
+        return new CardGame(Suit.CIRCLE, 2);
     }
-    public static CardGame canCreateSqureCard(int value){
-        return new CardGame(Suit.SQUARES,2);
+
+    public static CardGame canCreateSqureCard(int value) {
+        return new CardGame(Suit.SQUARES, 2);
     }
-    public static CardGame canCreateStarCard(int value){
-        return new CardGame(Suit.STAR,2);
+
+    public static CardGame canCreateStarCard(int value) {
+        return new CardGame(Suit.STAR, 2);
     }
-    public static CardGame canCreateCrossCard(int value){
-        return new CardGame(Suit.CROSSES,2);
+
+    public static CardGame canCreateCrossCard(int value) {
+        return new CardGame(Suit.CROSSES, 2);
     }
-    public static CardGame canCreateWhotrCard(int value){
-        return new CardGame(Suit.WHOT,2);
+
+    public static CardGame canCreateWhotrCard(int value) {
+        return new CardGame(Suit.WHOT, 2);
     }
 
     public Suit getSuit() {

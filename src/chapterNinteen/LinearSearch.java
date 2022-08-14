@@ -1,26 +1,25 @@
 package chapterNinteen;
 
 public class LinearSearch {
-    public static int linearSearch(int[] data, int searchIndex){
-        for (int index = 0; index < data.length; index++){
+    public static int linearSearch(int[] data, int searchIndex) {
+        for (int index = 0; index < data.length; index++) {
             if (data[index] == searchIndex)
                 return index;
 
         }
         return -1;
     }
-    public static int binarySearch(int[] data, int key)
-    {
+
+    public static int binarySearch(int[] data, int key) {
         int low = 0;
         int high = data.length - 1;
         int middle = (low + high + 1) / 2;
         int location = -1;
-        do
-        {
+        do {
             System.out.print(remainingElements(data, low, high));
             for (int i = 0; i < middle; i++)
                 System.out.print(" ");
-                        System.out.println(" * ");
+            System.out.println(" * ");
             if (key == data[middle])
                 location = middle;
             else if (key < data[middle])
@@ -32,8 +31,7 @@ public class LinearSearch {
         return location;
     }
 
-    private static String remainingElements(int[] data, int low, int high)
-    {
+    private static String remainingElements(int[] data, int low, int high) {
         StringBuilder temporary = new StringBuilder();
 
         temporary.append(" ".repeat(Math.max(0, low)));

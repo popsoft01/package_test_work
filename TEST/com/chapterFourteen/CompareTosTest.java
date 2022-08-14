@@ -11,6 +11,6 @@ class CompareTosTest {
         CompareTos compareTos = new CompareTos();
 //    compareTos.compareString("yes","no");
 //        assertEquals("first string is greater",strint);
-        System.out.println(compareTos.compareString("yes","no"));
+        System.out.println(compareTos.compareString("yes", "no"));
     }
 }

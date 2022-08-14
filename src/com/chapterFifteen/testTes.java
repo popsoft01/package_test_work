@@ -16,7 +16,7 @@ public class testTes {
                 output.write(i);
         }
         try (
-         FileInputStream input = new FileInputStream("temp.dat");
+                FileInputStream input = new FileInputStream("temp.dat");
         ) {
 //// Read values from the file
             int value;

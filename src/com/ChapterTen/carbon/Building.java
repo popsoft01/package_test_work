@@ -1,6 +1,6 @@
 package com.ChapterTen.carbon;
 
-public class Building implements  CarbonFootprint{
+public class Building implements CarbonFootprint {
     @Override
     public void getCarbonFootprint() {
 

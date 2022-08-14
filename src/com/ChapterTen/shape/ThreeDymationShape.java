@@ -1,6 +1,6 @@
 package com.ChapterTen.shape;
 
-public abstract class ThreeDymationShape extends Shape{
+public abstract class ThreeDymationShape extends Shape {
 
     public ThreeDymationShape() {
     }
@@ -11,5 +11,6 @@ public abstract class ThreeDymationShape extends Shape{
 
     @Override
     public abstract double getArea();
+
     public abstract double getVolume();
 }

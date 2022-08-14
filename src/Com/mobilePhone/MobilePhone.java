@@ -8,22 +8,25 @@ public class MobilePhone {
     private final String INVALID_IMEI = "INVALID_IMEI";
 
     public MobilePhone(String imei) {
-        if (imei == ""){
+        if (imei == "") {
             this.imei = INVALID_IMEI;
-        }else { this.imei = imei;}
+        } else {
+            this.imei = imei;
+        }
     }
+
     public MobilePhone(String imei, String make) {
-       this(imei);
+        this(imei);
         this.make = make;
     }
 
     public MobilePhone(String imei, String make, PhoneManufacturer model) {
-        this(imei,make);
+        this(imei, make);
         this.model = model;
     }
 
     public MobilePhone(String imei, String make, PhoneManufacturer model, int storageSpace) {
-        this(imei,make,model);
+        this(imei, make, model);
         this.storageSpace = storageSpace;
     }
 

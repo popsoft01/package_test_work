@@ -10,16 +10,16 @@ public class Card {
         this.suit = suit;
     }
 
-    public Faces getFaces(){
+    public Faces getFaces() {
         return faces;
     }
 
-    public Suit getSuit(){
+    public Suit getSuit() {
         return suit;
     }
 
     @Override
     public String toString() {
-        return String.format("%s of %s", getFaces(),getSuit());
+        return String.format("%s of %s", getFaces(), getSuit());
     }
 }

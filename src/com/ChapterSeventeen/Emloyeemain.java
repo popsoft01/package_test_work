@@ -17,7 +17,7 @@ public class Emloyeemain {
                 new Employee("Wendy", "Brown", 4236.4, "Marketing")};
         List<Employee> list = Arrays.asList(employees);
         list.forEach(System.out::println);
-        Predicate<Employee> fourToSIxThousand = t->(t.getSalary() >= 4000 && t.getSalary()<=6000);
+        Predicate<Employee> fourToSIxThousand = t -> (t.getSalary() >= 4000 && t.getSalary() <= 6000);
         System.out.printf("%nEmployees earning $4000-$6000 per month sorted by salary:%n");
         list.stream()
                 .filter(fourToSIxThousand)
@@ -26,12 +26,12 @@ public class Emloyeemain {
 
         System.out.printf("%nFirst employee who earns $4000-$6000:%n%s%n",
                 list.stream()
-                .filter(fourToSIxThousand)
-                .findFirst()
-                .get());
+                        .filter(fourToSIxThousand)
+                        .findFirst()
+                        .get());
 
-        Function<Employee,String> byFirstName = Employee::getFirstName;
-        Function<Employee,String> byLastName = Employee::getLastName;
+        Function<Employee, String> byFirstName = Employee::getFirstName;
+        Function<Employee, String> byLastName = Employee::getLastName;
 
         Comparator<Employee> lastThenFirst = Comparator.comparing(byLastName).thenComparing(byFirstName);
         System.out.printf("%nEmployees in ascending order by last name then first:%n");
@@ -42,7 +42,7 @@ public class Emloyeemain {
         System.out.printf(
                 "%nEmployees in descending order by last name then first:%n");
         list.stream()
-                .sorted( lastThenFirst.reversed() )
+                .sorted(lastThenFirst.reversed())
                 .forEach(System.out::println);
 
         System.out.printf("%nUnique employee last names:%n");
@@ -59,11 +59,11 @@ public class Emloyeemain {
                 .forEach(System.out::println);
 
         System.out.printf("%nEmployees by department:%n");
-        Map<String,List<Employee>> groupedByDepartment =
+        Map<String, List<Employee>> groupedByDepartment =
                 list.stream()
-                .collect(Collectors.groupingBy(Employee::getDepartment));
+                        .collect(Collectors.groupingBy(Employee::getDepartment));
         groupedByDepartment.forEach(
-                (department,employeesInDepartment)->{
+                (department, employeesInDepartment) -> {
                     System.out.println(department);
                     employeesInDepartment.forEach(employee -> System.out.printf("  %s%n", employee));
                 }

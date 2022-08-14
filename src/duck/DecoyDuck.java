@@ -1,6 +1,6 @@
 package duck;
 
-public class DecoyDuck implements Duck{
+public class DecoyDuck implements Duck {
     @Override
     public void swim() {
 

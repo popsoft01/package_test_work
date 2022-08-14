@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class PigLatin {
 
     public String[] sentenceToken(String sentence) {
-       String[] word = sentence.split(" ");
+        String[] word = sentence.split(" ");
         System.out.println(Arrays.toString(word));
 
         return word;
@@ -22,10 +22,10 @@ public class PigLatin {
         return letter;
     }
 
-    public void moveChatToLast(char[] word){
+    public void moveChatToLast(char[] word) {
         StringBuilder newString = new StringBuilder(" ");
 //        char indexChar = word[0];
-        for (int i = 1; i< word.length; i++){
+        for (int i = 1; i < word.length; i++) {
 //            System.out.print(word[i] + " ");
             newString.append(word[i]);
             newString.append(word[0]);
@@ -39,7 +39,7 @@ public class PigLatin {
 //            swap(newChar, i, i-1);
 //            i--;
 //        }
-        }
+    }
 //    private void swap(char[] arr, int indexToSwap, int expectedIndex) {
 //        char character = arr[indexToSwap];
 //        arr[indexToSwap] = arr[expectedIndex];

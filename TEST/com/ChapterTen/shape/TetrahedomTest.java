@@ -7,16 +7,19 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TetrahedomTest {
     Tetrahedom tetrahedom;
+
     @BeforeEach
-    void startEachWith(){
-        tetrahedom = new Tetrahedom(3,2);
+    void startEachWith() {
+        tetrahedom = new Tetrahedom(3, 2);
     }
+
     @Test
-    void CanCalulateArea(){
-        assertEquals(5.196152422706632,tetrahedom.getArea());
+    void CanCalulateArea() {
+        assertEquals(5.196152422706632, tetrahedom.getArea());
     }
+
     @Test
-    void CanCalulateVolume(){
-        assertEquals(0.35355339059327373,tetrahedom.getVolume());
+    void CanCalulateVolume() {
+        assertEquals(0.35355339059327373, tetrahedom.getVolume());
     }
 }

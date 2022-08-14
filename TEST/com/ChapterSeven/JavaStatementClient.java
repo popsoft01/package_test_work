@@ -9,24 +9,26 @@ public class JavaStatementClient {
     JavaStatement state;
 
     @BeforeEach
-    void startWith(){
-        state=new JavaStatement();
+    void startWith() {
+        state = new JavaStatement();
     }
 
 
     @Test
-    void start(){
+    void start() {
         assertNotNull(state);
     }
+
     @Test
-    void canCreateArrayCount(){
+    void canCreateArrayCount() {
         int[] arrayCount = new int[10];
         assertEquals(0, state.createArray(arrayCount));
 //        System.out.println(Arrays.);
     }
+
     @Test
-    void canCreateArrayBonus(){
+    void canCreateArrayBonus() {
         int[] arrayBonus = new int[15];
-        assertEquals(arrayBonus[0]=1,state.canCreateNewArray(arrayBonus[1]));
+        assertEquals(arrayBonus[0] = 1, state.canCreateNewArray(arrayBonus[1]));
     }
 }

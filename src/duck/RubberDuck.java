@@ -1,6 +1,6 @@
 package duck;
 
-public class RubberDuck implements Duck,Quackable{
+public class RubberDuck implements Duck, Quackable {
     @Override
     public void swim() {
 

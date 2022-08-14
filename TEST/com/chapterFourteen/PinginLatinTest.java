@@ -9,15 +9,16 @@ public class PinginLatinTest {
     PigLatin pigLatin;
 
     @BeforeEach
-    void  startEachWith(){
+    void startEachWith() {
         pigLatin = new PigLatin();
     }
+
     @Test
-    void sententenceCan_BeSplit(){
-       pigLatin.sentenceToken("Olu is a Boy");
+    void sententenceCan_BeSplit() {
+        pigLatin.sentenceToken("Olu is a Boy");
 //       pigLatin.stringToChar(pigLatin.sentenceToken("Olu is a Boy"));
 //        assertEquals("Olu",pigLatin.getTokenNizeSentence());
-       String[] newd = pigLatin.sentenceToken("Olu is a Boy");
+        String[] newd = pigLatin.sentenceToken("Olu is a Boy");
 //        System.out.println(pigLatin.moveChatToLast(newd));
     }
 }

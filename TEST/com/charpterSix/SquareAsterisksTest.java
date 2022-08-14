@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class SquareAsterisksTest {
     @Test
-    void test(){
+    void test() {
         SquareAsterisks.square();
 
     }

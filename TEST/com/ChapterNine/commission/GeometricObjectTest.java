@@ -9,26 +9,31 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GeometricObjectTest {
     GeometricObject shape;
+
     @BeforeEach
-    void startEachWith(){
+    void startEachWith() {
         shape = new GeometricObject("Red", false);
     }
+
     @Test
-    void geometricCanSetColour(){
+    void geometricCanSetColour() {
         shape.setColour("Red");
-        assertEquals("Red",shape.getColour());
+        assertEquals("Red", shape.getColour());
     }
+
     @Test
-    void geometricfillColour(){
+    void geometricfillColour() {
         shape.setFilled(true);
-        assertEquals(true,shape.isFilled());
+        assertEquals(true, shape.isFilled());
     }
+
     @Test
-    void  geometricCreateDate(){
+    void geometricCreateDate() {
         assertEquals(shape.getDateCreated(), shape.getDateCreated());
     }
+
     @Test
-    void exam(){
+    void exam() {
         System.out.println(shape);
 
     }

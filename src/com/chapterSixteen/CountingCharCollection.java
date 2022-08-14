@@ -4,27 +4,26 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CountingCharCollection {
-   public static void count( String input, char search){
+    public static void count(String input, char search) {
 
-       Map<Character,Integer> hash = new HashMap<Character,Integer>();
+        Map<Character, Integer> hash = new HashMap<Character, Integer>();
 
-       for(int i=0;i<input.length();i++)
-       {
-           if(hash.containsKey(input.charAt(i)))
-               hash.put(input.charAt(i), hash.get(input.charAt(i))+1);
+        for (int i = 0; i < input.length(); i++) {
+            if (hash.containsKey(input.charAt(i)))
+                hash.put(input.charAt(i), hash.get(input.charAt(i)) + 1);
 
-           else
-               hash.put(input.charAt(i), 1);
-       }
+            else
+                hash.put(input.charAt(i), 1);
+        }
 
-       int result = hash.get(search);
+        int result = hash.get(search);
 
-       System.out.println("The Character '"+search+"' appears "+result+" times.");
-   }
+        System.out.println("The Character '" + search + "' appears " + result + " times.");
+    }
 
     public static void main(String[] args) {
-       count("aaaabbAAAAcccddd",'a');
-        count("aaaabbAAAAcccddd",'b');
+        count("aaaabbAAAAcccddd", 'a');
+        count("aaaabbAAAAcccddd", 'b');
 //        String input = "aaaabbAAAAcccddd";
 //        char search = 'a';
     }

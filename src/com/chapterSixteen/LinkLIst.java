@@ -3,8 +3,7 @@ package com.chapterSixteen;
 import java.util.*;
 
 public class LinkLIst {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
 
         String[] colors = {"black", "yellow", "green", "blue", "violet", "silver"};
         List<String> list1 = new LinkedList<>(Arrays.asList(colors));
@@ -39,8 +38,8 @@ public class LinkLIst {
         ListIterator<String> iterator = list.listIterator(list.size());
         System.out.printf("%nReversed List:%n");
 // print list in reverse order
-        while ( iterator.hasPrevious() )
-            System.out.printf("%s ", iterator.previous() );
+        while (iterator.hasPrevious())
+            System.out.printf("%s ", iterator.previous());
     }
 
     private static void removeItems(List<String> list, int start, int end) {
@@ -48,11 +47,9 @@ public class LinkLIst {
     }
 
 
-
     private static void convertToUppercaseStrings(List<String> list) {
         ListIterator<String> iterator = list.listIterator();
-        while ( iterator.hasNext() )
-        {
+        while (iterator.hasNext()) {
             String color = iterator.next(); // get item
             iterator.set(color.toUpperCase()); // convert to upper case
         }

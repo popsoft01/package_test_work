@@ -14,7 +14,7 @@ public class ComparingString {
 
 
     public static boolean regoinMatchCompare(String firstString, String secondString) {
-        return firstString.regionMatches(true,0,secondString,0,12);
+        return firstString.regionMatches(true, 0, secondString, 0, 12);
     }
 
     public static void main(String[] args) {
@@ -25,10 +25,10 @@ public class ComparingString {
         System.out.println("enter the first String");
         String secondString = input.nextLine();
         int value = compareString(firstString, secondString);
-        if (value < 0){
-            System.out.println(firstString + " is less than "+ secondString);
-        }else if(value > 0)
-            System.out.println((firstString + " is greater than "+ secondString));
+        if (value < 0) {
+            System.out.println(firstString + " is less than " + secondString);
+        } else if (value > 0)
+            System.out.println((firstString + " is greater than " + secondString));
         else
             System.out.println("its equal word");
 

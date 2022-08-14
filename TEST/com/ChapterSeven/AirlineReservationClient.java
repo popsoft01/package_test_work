@@ -10,11 +10,12 @@ public class AirlineReservationClient {
 
 
     @BeforeEach
-    void startWith(){
+    void startWith() {
         airLine = new AirLine();
     }
+
     @Test
-    void present(){
+    void present() {
         assertNotNull(airLine);
     }
 //    @Test
@@ -23,7 +24,7 @@ public class AirlineReservationClient {
 //    }
 
     @Test
-    void canSelectSeatType(){
+    void canSelectSeatType() {
 
     }
 }

@@ -10,11 +10,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class TextAnalysisTest {
 
     @BeforeEach
-    void setup(){
+    void setup() {
 
     }
+
     @Test
-    void haveAnalysisTestRepository(){
+    void haveAnalysisTestRepository() {
 
     }
 

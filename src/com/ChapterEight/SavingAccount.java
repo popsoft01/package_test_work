@@ -6,7 +6,7 @@ public class SavingAccount {
     private double savingsBalance;
     private static double annualInterestRate;
 
-    public SavingAccount(double savingsBalance){
+    public SavingAccount(double savingsBalance) {
         if (savingsBalance < 1)
             throw new IllegalArgumentException("Amount must be valid amount");
         else this.savingsBalance = savingsBalance;
@@ -15,10 +15,10 @@ public class SavingAccount {
     }
 
     public static void setAnnualInterestRate(double annualInterestRate) {
-        if (annualInterestRate >0.0 && annualInterestRate<1.0){
-        SavingAccount.annualInterestRate = annualInterestRate;}
-        else
-            throw  new IllegalArgumentException("Not a valid interest rate");
+        if (annualInterestRate > 0.0 && annualInterestRate < 1.0) {
+            SavingAccount.annualInterestRate = annualInterestRate;
+        } else
+            throw new IllegalArgumentException("Not a valid interest rate");
     }
 
     public void setSavingsBalance(double savingsBalance) {
@@ -29,19 +29,19 @@ public class SavingAccount {
         return savingsBalance;
     }
 
-    public double calculateMonthlyInterest(){
+    public double calculateMonthlyInterest() {
 
-        return savingsBalance * (SavingAccount.annualInterestRate/12);
+        return savingsBalance * (SavingAccount.annualInterestRate / 12);
     }
 
-    public double calculatedSavingforMonth(){
+    public double calculatedSavingforMonth() {
         double saving = calculateMonthlyInterest();
 //        System.out.println(saving);
-      return   savingsBalance += saving;
+        return savingsBalance += saving;
     }
 
-    public String toString(){
-        return String.format("%.2f%n",savingsBalance);
+    public String toString() {
+        return String.format("%.2f%n", savingsBalance);
     }
 
 
@@ -55,8 +55,8 @@ public class SavingAccount {
 //        account2.calculateMonthlyInterest();
 //        account.calculatedSavingforMonth();
 
-        for(int i = 1; i <=12; i++){
-            System.out.printf("%s-%d%8.2f%n","month",i, account.calculatedSavingforMonth());
+        for (int i = 1; i <= 12; i++) {
+            System.out.printf("%s-%d%8.2f%n", "month", i, account.calculatedSavingforMonth());
         }
 
     }

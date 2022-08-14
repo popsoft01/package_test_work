@@ -3,13 +3,13 @@ package algorithmTask;
 import java.util.Arrays;
 
 public class IntergerArgurment {
-    public static int[] sum(int[] a, int b){
+    public static int[] sum(int[] a, int b) {
         int[] c = new int[2];
-        for (int i =0; i<a.length; i++){
-            for (int j = i + 1; j <a.length; j++){
-                if (a[i] + a[j]==b) {
-                   c[0]=i;
-                   c[1] =j;
+        for (int i = 0; i < a.length; i++) {
+            for (int j = i + 1; j < a.length; j++) {
+                if (a[i] + a[j] == b) {
+                    c[0] = i;
+                    c[1] = j;
                 }
             }
         }

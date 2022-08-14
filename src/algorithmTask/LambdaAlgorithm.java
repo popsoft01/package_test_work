@@ -1,18 +1,20 @@
 package algorithmTask;
+
 interface Hello {
     String sayHello(String greet);
-public class LambdaAlgorithmTest {
+
+    public class LambdaAlgorithmTest {
 
 
-    public static void main(String[] args) {
-        Hello hello = (message) -> {
-            String str1 = "Welcome ";
-            return str1 + message;
-        };
-        System.out.println(hello.sayHello("Lambda Tutorial"));
+        public static void main(String[] args) {
+            Hello hello = (message) -> {
+                String str1 = "Welcome ";
+                return str1 + message;
+            };
+            System.out.println(hello.sayHello("Lambda Tutorial"));
+        }
+
     }
-
-}
 }
 
 

@@ -12,9 +12,8 @@ public class PeriorityQueue {
 
         System.out.print("Polling from queue: ");
 // display elements in queue
-        while ( list.size() > 0)
-        {
-            System.out.printf("%.1f ",list.poll()); //list.peek() ); // view top element
+        while (list.size() > 0) {
+            System.out.printf("%.1f ", list.poll()); //list.peek() ); // view top element
 //            list.poll(); // remove top element
         }
     }

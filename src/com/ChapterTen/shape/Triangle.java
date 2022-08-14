@@ -12,6 +12,6 @@ public class Triangle extends TwoDemimentionShape {
     public double getArea() {
         double bregth = getLength();
         double heigth = getWidth();
-        return (1/2.0) * bregth * heigth ;
+        return (1 / 2.0) * bregth * heigth;
     }
 }

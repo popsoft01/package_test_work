@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Arraylist {
     public static void main(String[] args) {
-        String[] colours ={"MAGENTA", "RED", "WHITE", "BLUE", "CYAN"};
+        String[] colours = {"MAGENTA", "RED", "WHITE", "BLUE", "CYAN"};
         List<String> list = new ArrayList<>(Arrays.asList(colours));
 
         String[] removeColors = {"MAGENTA", "WHITE", "BLUE"};

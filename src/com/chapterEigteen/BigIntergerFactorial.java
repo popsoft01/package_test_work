@@ -3,7 +3,7 @@ package com.chapterEigteen;
 import java.math.BigInteger;
 
 public class BigIntergerFactorial {
-    public static BigInteger factorial(BigInteger number){
+    public static BigInteger factorial(BigInteger number) {
         if (number.equals(BigInteger.ZERO) || number.equals(BigInteger.ONE))
             return BigInteger.ONE;
         else {

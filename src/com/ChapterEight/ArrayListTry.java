@@ -12,11 +12,11 @@ public class ArrayListTry {
             System.out.println("Enter a unique number");
             number = input.nextInt();
 
-            if (!list.contains(number) && number != 0){
+            if (!list.contains(number) && number != 0) {
                 list.add(number);
             }
 
-        }while (number != 0);
+        } while (number != 0);
         for (Integer integer : list) {
             System.out.print(integer + " ");
         }

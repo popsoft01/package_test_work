@@ -8,15 +8,15 @@ public abstract class Shape {
     public Shape() {
     }
 
-    public Shape(double length, double width){
-        if (length < 0.0){
+    public Shape(double length, double width) {
+        if (length < 0.0) {
             throw new IllegalArgumentException("Length must be greater 0.0");
-        }else{
+        } else {
             this.length = length;
         }
-        if (width < 0.0){
+        if (width < 0.0) {
             throw new IllegalArgumentException("Width must be greater 0.0");
-        }else{
+        } else {
             this.width = width;
         }
     }
@@ -30,9 +30,9 @@ public abstract class Shape {
     }
 
     public void setWidth(double width) {
-        if (width < 0.0){
+        if (width < 0.0) {
             throw new IllegalArgumentException("Lengh must be greater 0.0");
-        }else{
+        } else {
             this.width = width;
         }
 
@@ -43,10 +43,10 @@ public abstract class Shape {
         return "Shape{" + "width=" + width + ", length=" + length + "Area " + getArea() + " }";
     }
 
-    public void setLength(double length){
-        if (length < 0.0){
+    public void setLength(double length) {
+        if (length < 0.0) {
             throw new IllegalArgumentException("Length must be greater 0.0");
-        }else{
+        } else {
             this.length = length;
         }
     }
@@ -54,12 +54,11 @@ public abstract class Shape {
     public abstract double getArea();
 
 
-
     public void setLength(int length) {
-        if (length < 0.0){
+        if (length < 0.0) {
             throw new IllegalArgumentException("Length must be greater 0.0");
-        }else{
+        } else {
             this.length = length;
+        }
     }
-}
 }

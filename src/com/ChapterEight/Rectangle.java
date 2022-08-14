@@ -7,12 +7,12 @@ public class Rectangle {
     private static double width;
     public double area;
 
-    public Rectangle(){
+    public Rectangle() {
         setWidth(1.0);
         setLength(1.0);
     }
 
-    public Rectangle(double length, double width){
+    public Rectangle(double length, double width) {
         if (length <= 0.0 && length > 20.0)
             throw new IllegalArgumentException("value can not be less than zero");
         if (width <= 0.0 && length > 20.0)
@@ -27,7 +27,7 @@ public class Rectangle {
     }
 
     public void setLength(double length) {
-        if (length <= 0.0 && length >20.0)
+        if (length <= 0.0 && length > 20.0)
             throw new IllegalArgumentException("value can not be less than zero");
         Rectangle.length = length;
     }
@@ -37,16 +37,18 @@ public class Rectangle {
     }
 
     public void setWidth(double width) {
-        if (width <= 0.0 && width >20.0)
+        if (width <= 0.0 && width > 20.0)
             throw new IllegalArgumentException("value can not be less than zero");
         Rectangle.width = width;
     }
-    public double calculateArea(double length,double width){
+
+    public double calculateArea(double length, double width) {
         area = length * width;
         return area;
     }
-    public double parameter(double length,double width){
-      return   2 * length + 2 * width;
+
+    public double parameter(double length, double width) {
+        return 2 * length + 2 * width;
     }
 
 
@@ -55,12 +57,10 @@ public class Rectangle {
 //
 //        double newWigth = input.nextDouble();
 //        double newLength = input.nextDouble();
-        Rectangle rect = new Rectangle(10,15);
+        Rectangle rect = new Rectangle(10, 15);
         rect.setLength(10);
         rect.setWidth(15);
-        System.out.println( rect.calculateArea(rect.getLength(), rect.getWidth()));
-
-
+        System.out.println(rect.calculateArea(rect.getLength(), rect.getWidth()));
 
 
     }

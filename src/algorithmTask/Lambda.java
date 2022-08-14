@@ -1,4 +1,5 @@
 package algorithmTask;
+
 @FunctionalInterface
 interface MyFunctionalInterface {
     String sayHello();
@@ -7,7 +8,7 @@ interface MyFunctionalInterface {
 public class Lambda {
     public static void main(String args[]) {
         // lambda expression
-        MyFunctionalInterface msg = () ->  "Hello";
+        MyFunctionalInterface msg = () -> "Hello";
         System.out.println(msg.sayHello());
     }
 }

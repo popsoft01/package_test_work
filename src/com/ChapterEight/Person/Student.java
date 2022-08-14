@@ -1,4 +1,4 @@
 package com.ChapterEight.Person;
 
-public class Student extends Person{
+public class Student extends Person {
 }

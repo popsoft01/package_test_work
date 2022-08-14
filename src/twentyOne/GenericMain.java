@@ -13,13 +13,13 @@ public class GenericMain {
         list.insertAtBack(5);
         list.print();
 
-        try{
+        try {
             int removeditem = list.removeFromFront();
             System.out.printf("%n%d removed%n", removeditem);
             list.print();
 
             removeditem = list.removeFromFront();
-            System.out.printf("%n%d removed%n",removeditem);
+            System.out.printf("%n%d removed%n", removeditem);
             list.print();
 
             removeditem = list.removeFromBack();

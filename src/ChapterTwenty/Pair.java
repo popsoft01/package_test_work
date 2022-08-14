@@ -1,6 +1,6 @@
 package ChapterTwenty;
 
-public class Pair<F,S> {
+public class Pair<F, S> {
     private F firstArgurment;
     private S secondArgurment;
 

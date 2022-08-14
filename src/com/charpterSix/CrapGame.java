@@ -11,13 +11,11 @@ public class CrapGame {
         private enum Status {CONTINUE, WON, LOST}
 
 
-
         private static final int SNAKE_EYES = 2;
         private static final int TREY = 3;
         private static final int SEVEN = 7;
         private static final int YO_LEVEN = 11;
         private static final int BOX_CARS = 12;
-
 
 
         public static void main(String[] args) {
@@ -67,18 +65,15 @@ public class CrapGame {
                 }
 
 
-                while (gameStatus == Status.CONTINUE)
-                {
+                while (gameStatus == Status.CONTINUE) {
                     sumOfDice = rollDice();
 
 
-                    if (sumOfDice == myPoint)
-                    {
+                    if (sumOfDice == myPoint) {
                         gameStatus = Status.WON;
                         bankBalance += wager;
                     } else {
-                        if (sumOfDice == SEVEN)
-                        {
+                        if (sumOfDice == SEVEN) {
                             gameStatus = Status.LOST;
                             if (bankBalance - wager >= 0)
                                 bankBalance -= wager;

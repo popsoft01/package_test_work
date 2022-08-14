@@ -8,12 +8,14 @@ public class Invoice implements Payable {
 
 
     public Invoice(String partNumber, String productDescription, int quantity, double pricePerItem) {
-        if (quantity > 0){
-            this.quantity =quantity;
-        }else {throw new IllegalArgumentException("Quantity cannot be less than 0");}
-        if (pricePerItem > 0.0){
+        if (quantity > 0) {
+            this.quantity = quantity;
+        } else {
+            throw new IllegalArgumentException("Quantity cannot be less than 0");
+        }
+        if (pricePerItem > 0.0) {
             this.pricePerItem = pricePerItem;
-        }else {
+        } else {
             throw new IllegalThreadStateException("Price cannot be less than 0");
         }
         this.partNumber = partNumber;
@@ -21,7 +23,7 @@ public class Invoice implements Payable {
     }
 
     public void setQuantity(int quantity) {
-        if (quantity > 0){
+        if (quantity > 0) {
             this.quantity = quantity;
         }
     }
@@ -29,6 +31,7 @@ public class Invoice implements Payable {
     public int getQuantity() {
         return quantity;
     }
+
     public String getPartNumber() {
         return partNumber;
     }
@@ -52,8 +55,9 @@ public class Invoice implements Payable {
     }
 
     public void setPricePerItem(double pricePerItem) {
-        if (pricePerItem > 0.0){
-            this.pricePerItem = pricePerItem;}else {
+        if (pricePerItem > 0.0) {
+            this.pricePerItem = pricePerItem;
+        } else {
             throw new IllegalArgumentException("Price cannot be less than 0");
         }
     }

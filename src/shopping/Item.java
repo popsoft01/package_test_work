@@ -3,7 +3,7 @@ package shopping;
 import java.math.BigInteger;
 
 public class Item {
-//    private static BigInteger price;
+    //    private static BigInteger price;
     private String id;
     private BigInteger price;
     private String description;

@@ -21,13 +21,14 @@ public class ArraySimplifyWithLamdas {
                         .sorted()
                         .collect(Collectors.toList()));
     }
-    public static void printElementOfgreaterthan4(Integer[] values){
-       List<Integer> greaterThanfour = Arrays.stream(values)
+
+    public static void printElementOfgreaterthan4(Integer[] values) {
+        List<Integer> greaterThanfour = Arrays.stream(values)
                 .filter(value -> value > 4)
                 .sorted()
                 .collect(Collectors.toList());
         System.out.println(greaterThanfour);
 
-        System.out.println( greaterThanfour.stream().sorted().collect(Collectors.toList()));
+        System.out.println(greaterThanfour.stream().sorted().collect(Collectors.toList()));
     }
 }

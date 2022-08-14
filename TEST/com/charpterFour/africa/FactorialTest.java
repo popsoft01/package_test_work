@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class FactorialTest {
     @Test
-    void test(){
+    void test() {
         Factorial factorial = new Factorial();
         int fact = factorial.calculateFactorial(5);
         System.out.println(fact);

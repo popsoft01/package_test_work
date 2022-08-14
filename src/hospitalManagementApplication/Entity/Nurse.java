@@ -3,13 +3,12 @@ package hospitalManagementApplication.Entity;
 import java.time.LocalDate;
 import java.util.UUID;
 
-public class Nurse extends  User{
+public class Nurse extends User {
     private String id;
     private String password;
     private String phoneNumber;
     private String firstName;
-    private  String lastName;
-
+    private String lastName;
 
 
     public Nurse(int roleId, String username, LocalDate dob, String userAddress, String email, String id, String password, String phoneNumber, String firstName, String lastName) {
@@ -22,10 +21,9 @@ public class Nurse extends  User{
     }
 
 
-
     @Override
     public void setId(String id) {
-        this.id ="NUR-" + UUID.randomUUID().toString();
+        this.id = "NUR-" + UUID.randomUUID().toString();
     }
 
     @Override

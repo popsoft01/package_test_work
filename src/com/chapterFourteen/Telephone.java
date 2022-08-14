@@ -16,19 +16,19 @@ public class Telephone {
     }
 
     public String tokenSplit() {
-      String  firstIndex = " ";
-      String[] newToken = getPhonenumber().split(" ");
-      for (int i = 0; i < newToken.length; i++){
-          firstIndex = newToken[0];
-      }
-      return firstIndex;
+        String firstIndex = " ";
+        String[] newToken = getPhonenumber().split(" ");
+        for (int i = 0; i < newToken.length; i++) {
+            firstIndex = newToken[0];
+        }
+        return firstIndex;
     }
 
     public String tokenLastSplit() {
-        String  lastIndex = " ";
+        String lastIndex = " ";
         String[] newToken = getPhonenumber().split(" ");
-        for (int i = 0; i < newToken.length; i++){
-            lastIndex = newToken[newToken.length-1];
+        for (int i = 0; i < newToken.length; i++) {
+            lastIndex = newToken[newToken.length - 1];
         }
         return lastIndex;
     }

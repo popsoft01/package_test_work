@@ -24,8 +24,8 @@ public class IsUnique {
 //}
 
     public static void main(String[] args) {
-        System.out.println(  checkIsUnique("love"));
-        System.out.println(  checkIsUnique("adaba"));
+        System.out.println(checkIsUnique("love"));
+        System.out.println(checkIsUnique("adaba"));
 
 //        System.out.println(checkIsUnique("Adalowo"));
     }

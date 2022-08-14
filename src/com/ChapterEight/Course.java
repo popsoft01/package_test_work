@@ -8,20 +8,21 @@ public class Course {
     private int numberOfStudents;
 
 
-    public Course(String courseName){
+    public Course(String courseName) {
         this.courseName = courseName;
     }
 
-    public String getCourseName(){
+    public String getCourseName() {
         return courseName;
     }
 
-    public void addStudent(String student){
+    public void addStudent(String student) {
         students[numberOfStudents] = student;
         numberOfStudents++;
     }
-    public void deleteStudent(String student){
-        for (int i = 0; i<students.length; i++){
+
+    public void deleteStudent(String student) {
+        for (int i = 0; i < students.length; i++) {
             if (students[i].equals(student))
                 students[i] = null;
         }
@@ -29,10 +30,12 @@ public class Course {
         numberOfStudents--;
 
     }
-    public String[] getStudents(){
+
+    public String[] getStudents() {
         return students;
     }
-    public int getNumberOfStudents(){
+
+    public int getNumberOfStudents() {
         return numberOfStudents;
     }
 
@@ -54,7 +57,7 @@ public class Course {
 //            course2.deleteStudent("Kim Smith");
 //        System.out.print(students[i] + ", ");
 //        course2.deleteStudent("Steve Smith");
-        System.out.print("Number of students in course2: " + course2.getNumberOfStudents());
+            System.out.print("Number of students in course2: " + course2.getNumberOfStudents());
     }
 
 }

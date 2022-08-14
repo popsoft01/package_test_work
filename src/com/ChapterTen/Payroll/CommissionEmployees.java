@@ -2,7 +2,7 @@ package com.ChapterTen.Payroll;
 
 import com.ChapterEight.Date;
 
-public class CommissionEmployees extends Employee{
+public class CommissionEmployees extends Employee {
 
     private double commissionRate;
     private double grossSales;

@@ -36,9 +36,10 @@ public class DuplicateElimination {
             if (array[i] != array[i++]) {
                 temp[newIndex++] = array[i];
             }
-            temp[newIndex++] = array[i -1];
-            for (int k = 0; k < newIndex; k++){
-                array[k] = temp[k]; }
+            temp[newIndex++] = array[i - 1];
+            for (int k = 0; k < newIndex; k++) {
+                array[k] = temp[k];
+            }
         }
         System.out.println(Arrays.toString(temp));
         System.out.println(newIndex);
@@ -60,7 +61,7 @@ public class DuplicateElimination {
 
     public boolean isUnique(int[] array, int number) {
         for (int j = 0; j <= array.length - 1; j++) {
-            if (array[j] == number){
+            if (array[j] == number) {
 //                System.out.println(Arrays.toString(array));
                 return true;
             }
@@ -75,13 +76,13 @@ public class DuplicateElimination {
         DuplicateElimination duplicate = new DuplicateElimination();
         Scanner input = new Scanner(System.in);
         int number;
-        for (int i = 0; i < array.length; i++){
-        number = input.nextInt();
-        if (!duplicate.isUnique(array,number)){
-            array[i] = number;
-        }else{
-            System.out.println("invalid input");
-        }
+        for (int i = 0; i < array.length; i++) {
+            number = input.nextInt();
+            if (!duplicate.isUnique(array, number)) {
+                array[i] = number;
+            } else {
+                System.out.println("invalid input");
+            }
             for (int count : array) {
                 if (count != 0) {
                     System.out.println(array[count]);

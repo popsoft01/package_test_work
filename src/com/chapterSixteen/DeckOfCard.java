@@ -10,16 +10,17 @@ public class DeckOfCard {
     public DeckOfCard() {
         Card[] card = new Card[52];
         int count = 0;
-        for (Suit suit :Suit.values()){
-            for (Faces face : Faces.values()){
-                card[count] = new Card(face,suit);
+        for (Suit suit : Suit.values()) {
+            for (Faces face : Faces.values()) {
+                card[count] = new Card(face, suit);
                 ++count;
             }
         }
         list = Arrays.asList(card);
         Collections.shuffle(list);
     }
-    public void printCards(){
+
+    public void printCards() {
         for (int i = 0; i < list.size(); i++)
             System.out.printf("%-19s%s", list.get(i), ((i + 1) % 4 == 0) ? "%n" : "");
     }

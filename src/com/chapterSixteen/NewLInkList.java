@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 public class NewLInkList {
     public static void main(String[] args) {
-        String[] name = {"Bola", "Tola", "Tope", "Sade","Bukky"};
+        String[] name = {"Bola", "Tola", "Tope", "Sade", "Bukky"};
         LinkedList<String> list = new LinkedList<>(Arrays.asList(name));
         list.addLast("Tulo");
         list.addFirst("Tunde");
@@ -13,7 +13,7 @@ public class NewLInkList {
         list.add("Tutu");
 
         System.out.println("number of element in the array");
-        System.out.printf("%s",list.size());
+        System.out.printf("%s", list.size());
         System.out.println();
 
         System.out.println("element");

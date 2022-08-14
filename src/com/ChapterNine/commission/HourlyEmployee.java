@@ -8,22 +8,22 @@ public class HourlyEmployee extends Employee {
 
     public HourlyEmployee(String firstName, String lastName, String socialSecurityNumber, double hour, double wage) {
         super(firstName, lastName, socialSecurityNumber);
-        if (hour > 0.0 && hour < 168){
-            this.hour = hour;}
-        else
+        if (hour > 0.0 && hour < 168) {
+            this.hour = hour;
+        } else
             throw new IllegalArgumentException("Hour can not be less than Zero");
 
-        if (hour > 0.0){
-            this.wage = wage;}
-        else
+        if (hour > 0.0) {
+            this.wage = wage;
+        } else
             throw new IllegalArgumentException("Wage can not be less than Zero");
 
     }
 
     public void setHour(double hour) {
-        if (hour > 0.0 && hour < 168){
-            this.hour = hour;}
-        else
+        if (hour > 0.0 && hour < 168) {
+            this.hour = hour;
+        } else
             throw new IllegalArgumentException("Hour can not be less than Zero");
     }
 
@@ -32,9 +32,9 @@ public class HourlyEmployee extends Employee {
     }
 
     public void setWage(double wage) {
-        if (wage > 0.0){
-            this.wage = wage;}
-        else
+        if (wage > 0.0) {
+            this.wage = wage;
+        } else
             throw new IllegalArgumentException("Wage can not be less than Zero");
     }
 
@@ -47,7 +47,7 @@ public class HourlyEmployee extends Employee {
     }
 
     @Override
-    public String toString(){
-        return String.format("%s %s %s %n",getFirstName(),getLastName(),getsocialSecurityNumber(),earnings());
+    public String toString() {
+        return String.format("%s %s %s %n", getFirstName(), getLastName(), getsocialSecurityNumber(), earnings());
     }
 }

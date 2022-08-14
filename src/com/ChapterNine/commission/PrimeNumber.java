@@ -35,14 +35,13 @@ public class PrimeNumber {
                 if (count % NUMBER_PER_LINE == 0) {
 // Print the number and advance to the new line
                     System.out.println(number);
-                }
-                else
+                } else
                     System.out.print(number + " ");
             }
 // Check whether the next number is prime
             number++;
         }
         System.out.println("\n" + count +
-                " prime(s) less than or equal to "+ n);
+                " prime(s) less than or equal to " + n);
     }
 }
